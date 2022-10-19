@@ -4,12 +4,20 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
-            description="Présentation de Benoit TORTEVOIS - Junior WEB Developper"
+            description="Présentation de Benoit TORTEVOIS - WEB Developper fullstack"
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Benoit TORTEVOIS - WEB Developper</title>
+        <script
+            src="https://kit.fontawesome.com/968d4dd58f.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+        <link
+            rel="icon"
+            href="./assets/icons8-internet-32.png"
+            type="image/x-icon"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -19,20 +27,87 @@
     </head>
 
     <body>
+        <div class="loader"></div>
         <main>
             <div class="mainContent">
                 <div class="mainContent__desc">
-                    <h1>Benoit TORTEVOIS</h1>
-                    <h2>WEB Developper</h2>
+                    <div class="mainContent__desc__titles">
+                        <h1>Benoit TORTEVOIS</h1>
+                        <h2>WEB Developper fullstack</h2>
+                    </div>
+                    <div class="mainContent__desc__articles">
+                        <article
+                            class="mainContent__desc__articles__prez"
+                            id="prezBlock"
+                        >
+                            Jeune diplômé de la formation développeur WEB
+                            dispensée par OpenClassrooms. <br />
+                            Passionné d'informatique et de nouvelles
+                            technologies, autodidacte, curieux et débrouillard.
+                            <br />
+                            Compétent du frontend au backend, en passant par le
+                            prototypage <br />
+                            Ou encore la gestion de bases de données.
+                            <br /><br />
+
+                            Cette formation m'a permis de découvrir la
+                            conception de sites et applications WEB. De
+                            l'intégration de maquettes, à la réalisation d'une
+                            application complète de A à Z, en passant par
+                            l'apprentissage de la SEO ou encore la découverte
+                            des animations CSS, j'ai parcouru bon nombre de
+                            technologies et méthodes de travail qui m'ont forgé
+                            et me permettent aujourd'hui de proposer mes
+                            compétences variées à toute entreprise cherchant un
+                            développeur talentueux et complet.
+                        </article>
+                        <div
+                            class="mainContent__desc__articles__techs"
+                            id="techsBlock"
+                        >
+                            <div class="baseTechs">
+                                <i class="fa-brands fa-html5">HTML5</i>
+                                <i class="fa-brands fa-css3-alt">CSS3</i><br />
+                                <i class="fa-brands fa-sass">SCSS</i>
+                                <i class="fa-brands fa-js">JAVASCRIPT</i>
+                            </div>
+
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                    </div>
                 </div>
                 <nav class="navmenu">
+                    <div class="navmenu__profilePic">
+                        <img
+                            src="./assets/id_benoit_tortevois.webp"
+                            alt="photo Benoit TORTEVOIS"
+                        />
+                        <div class="navmenu__profilePic__blazeFX1"></div>
+                        <div class="navmenu__profilePic__blazeFX2"></div>
+                        <div class="navmenu__profilePic__blazeFX3"></div>
+                    </div>
+
                     <div class="navmenu__tabs">
-                        <div class="navmenu__tabs__unique">Présentation</div>
-                        <div class="navmenu__tabs__unique">Réalisations</div>
-                        <div class="navmenu__tabs__unique">
-                            Télécharger le CV
+                        <div class="navmenu__tabs__unique" id="prezTab">
+                            <i class="fa-solid fa-person-chalkboard"></i>
+                            <span>Présentation</span>
                         </div>
-                        <div class="navmenu__tabs__unique">Contact</div>
+                        <div class="navmenu__tabs__unique" id="techsTab">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Technologies</span>
+                        </div>
+                        <div class="navmenu__tabs__unique" id="projectsTab">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <span>Réalisations</span>
+                        </div>
+                        <div class="navmenu__tabs__unique" id="resumeTab">
+                            <i class="fa-solid fa-file"></i>
+                            <span>Télécharger le CV</span>
+                        </div>
+                        <div class="navmenu__tabs__unique" id="contactTab">
+                            <i class="fa-solid fa-address-card"></i>
+                            <span>Contact</span>
+                        </div>
                     </div>
                 </nav>
             </div>

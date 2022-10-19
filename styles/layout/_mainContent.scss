@@ -8,7 +8,36 @@
         width: 70vw;
         display: flex;
         flex-direction: column;
-        justify-content: baseline;
+        justify-content: space-around;
         align-items: center;
+        position: relative;
+        &__titles {
+            position: absolute;
+            top: 10px;
+        }
+        &__articles {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__prez {
+                display: block;
+                width: 80%;
+                font-size: 24px;
+                margin: 20px 0 20px;
+                line-height: 150%;
+                padding: 5px;
+                text-align: justify;
+                color: white;
+                box-shadow: -12px -13px 10px -10px $secondaryColorA;
+            }
+            &__techs {
+                display: none;
+                color: white;
+                & i {
+                    font-size: 75px;
+                }
+            }
+        }
     }
 }

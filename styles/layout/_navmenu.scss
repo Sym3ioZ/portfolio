@@ -1,33 +1,100 @@
 .navmenu {
     width: 30vw;
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: rgba(0, 0, 0, 0.45);
     color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__profilePic {
+        width: 250px;
+        height: 280px;
+        border-radius: 50%;
+        margin-top: 20px;
+        box-shadow: 0px 0px 25px 2px $primaryColor;
+        overflow: hidden;
+        position: relative;
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+        &__blazeFX1 {
+            width: 3%;
+            height: 100%;
+            transform: skew(15deg);
+            background-color: $secondaryColorA;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        &__blazeFX2 {
+            width: 7%;
+            height: 100%;
+            transform: skew(15deg);
+            background-color: $secondaryColorA;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            z-index: 10;
+        }
+        &__blazeFX3 {
+            width: 4%;
+            height: 100%;
+            transform: skew(15deg);
+            background-color: $secondaryColorA;
+            opacity: 0.4;
+            position: absolute;
+            top: 0;
+            left: 15%;
+            z-index: 10;
+        }
+    }
     &__tabs {
         width: 100%;
-        height: 100%;
+        height: 66%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         &__unique {
-            height: 15%;
+            height: 10%;
             width: 100%;
-            padding: 2% 0;
-            font-size: 26px;
+            margin: 2% 0;
             transform: scale(1);
             transform-origin: right;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            transition: all 200ms ease-in-out;
+            transition: all 250ms ease-in-out;
+            position: relative;
+            & i {
+                position: absolute;
+                left: 4%;
+                color: white;
+                transform: scale(0) rotate(0deg);
+                font-size: 24px;
+                transition: all 200ms 50ms ease-in-out;
+            }
+            & span {
+                font-size: 26px;
+                transform: skew(0deg);
+                transition: all 200ms 50ms ease-in-out;
+            }
             &:hover {
                 cursor: pointer;
                 background-color: $secondaryColorA;
+                border-radius: 5% 0 0 5% / 50% 0 0 50%;
                 transform: scale(1.15);
-                border-radius: 15% 0 0 15% / 50% 0 0 50%;
-                font-size: 35px;
+                & span {
+                    font-size: 32px;
+                    transform: skew(-15deg);
+                }
+                & i {
+                    transform: scale(1) rotate(360deg);
+                }
             }
         }
     }
