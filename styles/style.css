@@ -62,9 +62,8 @@
   align-items: center;
 }
 .navmenu__tabs__unique {
-  height: 10%;
+  height: 12%;
   width: 100%;
-  margin: 2% 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -99,26 +98,22 @@
   right: 3%;
   transition: all 200ms 50ms ease-in-out;
 }
-.navmenu__tabs__unique span .selected {
-  font-size: 36px;
-  transform: skew(-15deg);
-}
 .navmenu__tabs__unique:hover {
   cursor: pointer;
 }
 .navmenu__tabs__unique:hover span {
-  font-size: 36px;
+  font-size: 42px;
   transform: skew(-15deg);
-  margin-right: 20%;
+  margin-right: 10%;
 }
 .navmenu .selected::before {
   transform: translateX(0);
   border-radius: 5% 0 0 5%/50% 0 0 50%;
 }
 .navmenu .selected span {
-  font-size: 36px;
+  font-size: 42px;
   transform: skew(-15deg);
-  margin-right: 20%;
+  margin-right: 10%;
 }
 .navmenu .selected i {
   transform: translateX(0) scale(1) rotate(360deg);
@@ -127,12 +122,36 @@
   margin-bottom: 10px;
 }
 
+@-webkit-keyframes fadeOut {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  99% {
+    transform: translateX(0) translateY(0) scale(0);
+  }
+  100% {
+    transform: translateX(0) translateY(100vh) scale(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  99% {
+    transform: translateX(0) translateY(0) scale(0);
+  }
+  100% {
+    transform: translateX(0) translateY(100vh) scale(0);
+  }
+}
 .mainContent {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   height: 100vh;
+  overflow: hidden;
 }
 .mainContent__desc {
   width: 75vw;
@@ -148,15 +167,20 @@
 }
 .mainContent__desc__articles {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .mainContent__desc__articles__prez {
   display: block;
-  width: 80%;
+  position: absolute;
+  width: 90%;
   font-size: 24px;
   margin: 20px 0 20px;
+  transform: translateX(0) translateY(0) scale(1);
+  transition: all 300ms ease-in-out;
   line-height: 150%;
   padding: 5px;
   text-align: justify;
@@ -164,11 +188,23 @@
   box-shadow: -12px -13px 10px -10px rgba(157, 192, 0, 0.808);
 }
 .mainContent__desc__articles__techs {
-  display: none;
+  position: absolute;
   color: white;
+  transform: translateX(0) translateY(100vh) scale(0);
+  transition: all 300ms ease-in-out;
 }
 .mainContent__desc__articles__techs i {
   font-size: 75px;
+}
+.mainContent__desc__articles .fadeOut {
+  -webkit-animation: fadeOut 100ms ease-in-out forwards 1;
+          animation: fadeOut 100ms ease-in-out forwards 1;
+}
+.mainContent__desc__articles .fadeIn {
+  transform: translateX(0) translateY(0) scale(1);
+}
+.mainContent__desc__articles .awaiting {
+  transform: translateX(0) translateY(100vh) scale(0);
 }
 
 footer {

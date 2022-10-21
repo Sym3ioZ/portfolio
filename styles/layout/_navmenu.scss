@@ -59,9 +59,8 @@
         justify-content: center;
         align-items: center;
         &__unique {
-            height: 10%;
+            height: 12%;
             width: 100%;
-            margin: 2% 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -94,18 +93,13 @@
                 position: absolute;
                 right: 3%;
                 transition: all 200ms 50ms ease-in-out;
-                & .selected {
-                    font-size: 36px;
-                    transform: skew(-15deg);
-                }
             }
             &:hover {
                 cursor: pointer;
-                // background-color: $secondaryColorA;
                 & span {
-                    font-size: 36px;
+                    font-size: 42px;
                     transform: skew(-15deg);
-                    margin-right: 20%;
+                    margin-right: 10%;
                 }
             }
         }
@@ -115,11 +109,10 @@
             transform: translateX(0);
             border-radius: 5% 0 0 5% / 50% 0 0 50%;
         }
-        // background-color: $secondaryColorA;
         & span {
-            font-size: 36px;
+            font-size: 42px;
             transform: skew(-15deg);
-            margin-right: 20%;
+            margin-right: 10%;
         }
         & i {
             transform: translateX(0) scale(1) rotate(360deg);

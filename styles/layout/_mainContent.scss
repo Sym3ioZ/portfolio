@@ -1,9 +1,13 @@
+@import '../utils/variables';
+@import '../utils/keyframes';
+
 .mainContent {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height: 100vh;
+    overflow: hidden;
     &__desc {
         width: 75vw;
         display: flex;
@@ -17,14 +21,19 @@
         }
         &__articles {
             display: flex;
+            width: 100%;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
             &__prez {
                 display: block;
-                width: 80%;
+                position: absolute;
+                width: 90%;
                 font-size: 24px;
                 margin: 20px 0 20px;
+                transform: translateX(0) translateY(0) scale(1);
+                transition: all 300ms ease-in-out;
                 line-height: 150%;
                 padding: 5px;
                 text-align: justify;
@@ -32,11 +41,22 @@
                 box-shadow: -12px -13px 10px -10px $secondaryColorA;
             }
             &__techs {
-                display: none;
+                position: absolute;
                 color: white;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transition: all 300ms ease-in-out;
                 & i {
                     font-size: 75px;
                 }
+            }
+            .fadeOut {
+                animation: fadeOut 100ms ease-in-out forwards 1;
+            }
+            .fadeIn {
+                transform: translateX(0) translateY(0) scale(1);
+            }
+            .awaiting {
+                transform: translateX(0) translateY(100vh) scale(0);
             }
         }
     }
