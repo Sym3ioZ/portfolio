@@ -1,5 +1,5 @@
 .navmenu {
-    width: 30vw;
+    width: 25vw;
     background-color: rgba(0, 0, 0, 0.45);
     color: white;
     display: flex;
@@ -26,7 +26,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 10;
+            z-index: 5;
         }
         &__blazeFX2 {
             width: 7%;
@@ -37,7 +37,7 @@
             position: absolute;
             top: 0;
             left: 5%;
-            z-index: 10;
+            z-index: 5;
         }
         &__blazeFX3 {
             width: 4%;
@@ -48,7 +48,7 @@
             position: absolute;
             top: 0;
             left: 15%;
-            z-index: 10;
+            z-index: 5;
         }
     }
     &__tabs {
@@ -62,40 +62,70 @@
             height: 10%;
             width: 100%;
             margin: 2% 0;
-            transform: scale(1);
-            transform-origin: right;
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             transition: all 250ms ease-in-out;
             position: relative;
-            & i {
+            overflow: hidden;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                transform: translateX(100%);
+                transform-origin: left;
+                transition: all 250ms ease-in-out;
+                background-color: $secondaryColor;
                 position: absolute;
-                left: 4%;
+            }
+            & i {
                 color: white;
-                transform: scale(0) rotate(0deg);
+                position: absolute;
+                left: 5%;
+                transform: translateX(5vw) scale(0) rotate(0deg);
                 font-size: 24px;
-                transition: all 200ms 50ms ease-in-out;
+                transition: all 200ms 100ms ease-in-out;
             }
             & span {
-                font-size: 26px;
+                font-size: 28px;
+                text-align: center;
                 transform: skew(0deg);
+                position: absolute;
+                right: 3%;
                 transition: all 200ms 50ms ease-in-out;
+                & .selected {
+                    font-size: 36px;
+                    transform: skew(-15deg);
+                }
             }
             &:hover {
                 cursor: pointer;
-                background-color: $secondaryColorA;
-                border-radius: 5% 0 0 5% / 50% 0 0 50%;
-                transform: scale(1.15);
+                // background-color: $secondaryColorA;
                 & span {
-                    font-size: 32px;
+                    font-size: 36px;
                     transform: skew(-15deg);
-                }
-                & i {
-                    transform: scale(1) rotate(360deg);
+                    margin-right: 20%;
                 }
             }
         }
+    }
+    .selected {
+        &::before {
+            transform: translateX(0);
+            border-radius: 5% 0 0 5% / 50% 0 0 50%;
+        }
+        // background-color: $secondaryColorA;
+        & span {
+            font-size: 36px;
+            transform: skew(-15deg);
+            margin-right: 20%;
+        }
+        & i {
+            transform: translateX(0) scale(1) rotate(360deg);
+        }
+    }
+    &__credits {
+        margin-bottom: 10px;
     }
 }
