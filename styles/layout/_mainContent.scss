@@ -1,6 +1,3 @@
-@import '../utils/variables';
-@import '../utils/keyframes';
-
 .mainContent {
     width: 100%;
     display: flex;
@@ -16,8 +13,11 @@
         align-items: center;
         position: relative;
         &__titles {
+            display: block;
             position: absolute;
+            opacity: 0;
             top: 10px;
+            animation: loadingFade 750ms 2000ms ease-in-out forwards 1;
         }
         &__articles {
             display: flex;
@@ -26,6 +26,8 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            opacity: 0;
+            animation: loadingFade 750ms 2750ms ease-in-out forwards 1;
             &__prez {
                 display: block;
                 position: absolute;

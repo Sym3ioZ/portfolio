@@ -27,15 +27,25 @@
     </head>
 
     <body>
-        <div class="loader"></div>
         <main>
+            <div class="loader" id="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <div class="mainContent">
                 <div class="mainContent__desc">
-                    <div class="mainContent__desc__titles">
+                    <div
+                        class="mainContent__desc__titles"
+                        id="mainContent__desc__titles"
+                    >
                         <h1>Benoit TORTEVOIS</h1>
                         <h2>Développeur WEB</h2>
                     </div>
-                    <div class="mainContent__desc__articles">
+                    <div
+                        class="mainContent__desc__articles"
+                        id="mainContent__desc__articles"
+                    >
                         <article
                             class="mainContent__desc__articles__prez"
                             id="prezBlock"
@@ -88,7 +98,7 @@
                         ></article>
                     </div>
                 </div>
-                <nav class="navmenu">
+                <nav class="navmenu" id="navmenu">
                     <div class="navmenu__profilePic">
                         <img
                             src="./assets/id_benoit_tortevois.webp"

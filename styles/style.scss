@@ -1,4 +1,6 @@
 @import './utils/variables';
+@import './utils/keyframes';
+@import './components/loader';
 @import './layout/navmenu';
 @import './layout/mainContent';
 @import './layout/footer';
@@ -13,7 +15,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: rgb(0, 182, 119);
     background: linear-gradient(
         43deg,
         rgb(0, 182, 70) 0%,
@@ -33,13 +34,4 @@ h2 {
     font-size: 35px;
     text-align: center;
     color: $secondaryColor;
-}
-
-.loader {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
 }

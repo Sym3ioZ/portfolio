@@ -9,3 +9,23 @@
         transform: translateX(0) translateY(100vh) scale(0);
     }
 }
+
+@keyframes loadingFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes loadingFadeSlide {
+    from {
+        opacity: 0;
+        transform: translateX(25vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

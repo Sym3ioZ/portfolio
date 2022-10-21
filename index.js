@@ -1,5 +1,7 @@
 'use strict'
 
+const loader = document.getElementById('loader')
+
 const prezBlock = document.getElementById('prezBlock')
 const prezTab = document.getElementById('prezTab')
 const techsBlock = document.getElementById('techsBlock')
@@ -13,9 +15,9 @@ const contactTab = document.getElementById('contactTab')
 
 prezTab.addEventListener('click', displayPrez)
 techsTab.addEventListener('click', displayTechs)
-projectsTab.addEventListener('click', displayProjects)
-resumeTab.addEventListener('click', displayResume)
-contactTab.addEventListener('click', displayContact)
+// projectsTab.addEventListener('click', displayProjects)
+// resumeTab.addEventListener('click', displayResume)
+// contactTab.addEventListener('click', displayContact)
 
 function displayPrez() {
     prezBlock.classList.remove('awaiting')
