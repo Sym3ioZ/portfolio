@@ -206,7 +206,7 @@
   left: 5%;
   transform: translateX(5vw) scale(0) rotate(0deg);
   font-size: 24px;
-  transition: all 200ms 100ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .navmenu__tabs__unique span {
   font-size: 28px;
@@ -250,23 +250,24 @@
 }
 .mainContent__desc {
   width: 75vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: relative;
 }
 .mainContent__desc__titles {
   display: block;
-  position: absolute;
+  height: 20%;
   opacity: 0;
-  top: 10px;
   -webkit-animation: loadingFade 750ms 750ms ease-in-out forwards 1;
           animation: loadingFade 750ms 750ms ease-in-out forwards 1;
 }
 .mainContent__desc__articles {
   display: flex;
   width: 100%;
+  height: 80%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -284,19 +285,62 @@
   transform: translateX(0) translateY(0) scale(1);
   transition: all 300ms ease-in-out;
   line-height: 150%;
-  padding: 5px;
+  padding: 10px;
   text-align: justify;
   color: white;
+  border-radius: 20px 0 0 0;
   box-shadow: -12px -13px 10px -10px rgba(157, 192, 0, 0.808);
 }
 .mainContent__desc__articles__techs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
   position: absolute;
   color: white;
   transform: translateX(0) translateY(100vh) scale(0);
   transition: all 300ms ease-in-out;
 }
+.mainContent__desc__articles__techs__baseTechs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-radius: 20px 0 0 0;
+  box-shadow: -12px -13px 10px -10px rgba(157, 192, 0, 0.808);
+}
+.mainContent__desc__articles__techs__advancedTechs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-radius: 20px 0 0 0;
+  box-shadow: -12px -13px 10px -10px rgba(157, 192, 0, 0.808);
+}
 .mainContent__desc__articles__techs i {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   font-size: 75px;
+  margin-left: 20px;
+}
+.mainContent__desc__articles__techs i span {
+  text-align: center;
+  font-size: 48px;
+  color: rgb(157, 192, 0);
+  font-weight: normal;
+}
+.mainContent__desc__articles__techs p {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .mainContent__desc__articles .fadeOut {
   -webkit-animation: fadeOut 100ms ease-in-out forwards 1;
@@ -340,8 +384,8 @@ footer {
   align-items: center;
   background-color: transparent;
   opacity: 1;
-  -webkit-animation: loaderFade 2000ms 2000ms linear forwards;
-          animation: loaderFade 2000ms 2000ms linear forwards;
+  -webkit-animation: loaderFade 1000ms 2000ms linear forwards;
+          animation: loaderFade 1000ms 2000ms linear forwards;
 }
 .loader div:first-child {
   width: 10px;
@@ -352,8 +396,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 612ms;
-          animation-delay: 612ms;
+  -webkit-animation-delay: 468ms;
+          animation-delay: 468ms;
 }
 .loader div:nth-child(2) {
   width: 15px;
@@ -364,8 +408,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 276ms;
-          animation-delay: 276ms;
+  -webkit-animation-delay: 1176ms;
+          animation-delay: 1176ms;
 }
 .loader div:nth-child(3) {
   width: 20px;
@@ -376,8 +420,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 96ms;
-          animation-delay: 96ms;
+  -webkit-animation-delay: 972ms;
+          animation-delay: 972ms;
 }
 .loader div:nth-child(4) {
   width: 30px;
@@ -388,8 +432,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 312ms;
-          animation-delay: 312ms;
+  -webkit-animation-delay: 732ms;
+          animation-delay: 732ms;
 }
 .loader div:nth-child(5) {
   width: 20px;
@@ -400,8 +444,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 444ms;
-          animation-delay: 444ms;
+  -webkit-animation-delay: 324ms;
+          animation-delay: 324ms;
 }
 .loader div:nth-child(6) {
   width: 15px;
@@ -412,8 +456,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  -webkit-animation-delay: 132ms;
+          animation-delay: 132ms;
 }
 .loader div:last-child {
   width: 10px;
@@ -424,8 +468,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 756ms;
-          animation-delay: 756ms;
+  -webkit-animation-delay: 660ms;
+          animation-delay: 660ms;
 }
 
 body {
@@ -445,5 +489,9 @@ h1 {
 h2 {
   font-size: 35px;
   text-align: center;
+  color: rgb(157, 192, 0);
+}
+
+strong {
   color: rgb(157, 192, 0);
 }/*# sourceMappingURL=style.css.map */

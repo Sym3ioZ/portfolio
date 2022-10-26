@@ -24,14 +24,22 @@ function displayPrez() {
     prezBlock.classList.add('fadeIn')
     prezTab.classList.add('selected')
 
-    techsBlock.classList.remove('fadeIn')
-    techsBlock.classList.add('fadeOut')
-    projectsBlock.classList.remove('fadeIn')
-    projectsBlock.classList.add('fadeOut')
-    resumeBlock.classList.remove('fadeIn')
-    resumeBlock.classList.add('fadeOut')
-    contactBlock.classList.remove('fadeIn')
-    contactBlock.classList.add('fadeOut')
+    if (techsBlock.classList[1] != 'awaiting') {
+        techsBlock.classList.remove('fadeIn')
+        techsBlock.classList.add('fadeOut')
+    }
+    if (projectsBlock.classList[1] != 'awaiting') {
+        projectsBlock.classList.remove('fadeIn')
+        projectsBlock.classList.add('fadeOut')
+    }
+    if (resumeBlock.classList[1] != 'awaiting') {
+        resumeBlock.classList.remove('fadeIn')
+        resumeBlock.classList.add('fadeOut')
+    }
+    if (contactBlock.classList[1] != 'awaiting') {
+        contactBlock.classList.remove('fadeIn')
+        contactBlock.classList.add('fadeOut')
+    }
     techsTab.classList.remove('selected')
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')

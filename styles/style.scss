@@ -21,7 +21,7 @@
     align-items: center;
     background-color: transparent;
     opacity: 1;
-    animation: loaderFade 2000ms 2000ms linear forwards;
+    animation: loaderFade 1000ms 2000ms linear forwards;
     & div:first-child {
         width: 10px;
         height: 40px;
@@ -116,5 +116,9 @@ h1 {
 h2 {
     font-size: 35px;
     text-align: center;
+    color: $secondaryColor;
+}
+
+strong {
     color: $secondaryColor;
 }
