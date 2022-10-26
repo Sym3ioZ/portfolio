@@ -29,3 +29,26 @@
         transform: translateX(0);
     }
 }
+
+@keyframes loadingBars {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes loaderFade {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    99% {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
