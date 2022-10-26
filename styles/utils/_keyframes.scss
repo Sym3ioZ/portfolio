@@ -1,0 +1,32 @@
+@keyframes panelRotate {
+    from {
+        transform: rotate(0deg) scale(0);
+    }
+    30% {
+        transform: rotate(40deg) scale(0.5);
+    }
+    32% {
+        transform: rotate(40deg) scale(0.5);
+    }
+    55% {
+        transform: rotate(-40deg) scale(1);
+    }
+    57% {
+        transform: rotate(-40deg) scale(1);
+    }
+    70% {
+        transform: rotate(20deg) scale(1.15);
+    }
+    71% {
+        transform: rotate(20deg) scale(1.15);
+    }
+    85% {
+        transform: rotate(-10deg) scale(1.03);
+    }
+    86% {
+        transform: rotate(-10deg) scale(1.03);
+    }
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
