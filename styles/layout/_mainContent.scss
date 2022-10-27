@@ -1,22 +1,28 @@
 .mainContent {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 100vh;
-    overflow: hidden;
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    padding-right: -20px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
     &__desc {
-        width: 75vw;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        position: relative;
         &__titles {
-            display: block;
-            height: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             opacity: 0;
+            height: 20%;
             animation: loadingFade 750ms 750ms ease-in-out forwards 1;
         }
         &__articles {
@@ -30,7 +36,7 @@
             opacity: 0;
             animation: loadingFade 750ms 1500ms ease-in-out forwards 1;
             &__prez {
-                display: block;
+                display: flex;
                 position: absolute;
                 width: 90%;
                 font-size: 24px;
@@ -51,6 +57,7 @@
                 align-items: center;
                 width: 90%;
                 position: absolute;
+                top: 0;
                 color: white;
                 transform: translateX(0) translateY(100vh) scale(0);
                 transition: all 300ms ease-in-out;

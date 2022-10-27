@@ -1,6 +1,7 @@
 'use strict'
 
 const loader = document.getElementById('loader')
+const mainContent = document.getElementById('mainContent')
 
 const prezBlock = document.getElementById('prezBlock')
 const prezTab = document.getElementById('prezTab')
@@ -44,6 +45,11 @@ function displayPrez() {
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     contactTab.classList.remove('selected')
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
@@ -81,6 +87,11 @@ function displayTechs() {
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     contactTab.classList.remove('selected')
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     window.setTimeout(() => {
         prezBlock.classList.remove('fadeOut')
         prezBlock.classList.add('awaiting')
@@ -118,6 +129,11 @@ function displayProjects() {
     prezTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     contactTab.classList.remove('selected')
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
@@ -155,6 +171,11 @@ function displayResume() {
     projectsTab.classList.remove('selected')
     prezTab.classList.remove('selected')
     contactTab.classList.remove('selected')
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
@@ -192,6 +213,11 @@ function displayContact() {
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     prezTab.classList.remove('selected')
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
