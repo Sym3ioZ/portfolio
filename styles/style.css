@@ -269,7 +269,7 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-  height: 20%;
+  height: 15%;
   -webkit-animation: loadingFade 750ms 750ms ease-in-out forwards 1;
           animation: loadingFade 750ms 750ms ease-in-out forwards 1;
 }
@@ -279,6 +279,7 @@
   height: 80%;
   flex-direction: column;
   justify-content: center;
+  margin-top: 10px;
   align-items: center;
   position: relative;
   opacity: 0;
@@ -352,6 +353,52 @@
   margin-top: 20px;
   margin-bottom: 40px;
 }
+.mainContent__desc__articles__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  color: white;
+  transform: translateX(0) translateY(100vh) scale(0);
+  transition: all 300ms ease-in-out;
+}
+.mainContent__desc__articles__contact__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+.mainContent__desc__articles__contact__link i {
+  font-size: 60px;
+  color: rgb(157, 192, 0);
+  transform: scale(1);
+  transition: all 200ms ease-out;
+  margin-right: 20px;
+}
+.mainContent__desc__articles__contact__link p {
+  color: white;
+  font-size: 36px;
+  transform: translateX(0) scale(1) skew(0deg);
+  transform-origin: left;
+  transition: all 200ms ease-out;
+}
+.mainContent__desc__articles__contact__link:hover {
+  cursor: pointer;
+}
+.mainContent__desc__articles__contact__link:hover i {
+  transform: scale(1.2);
+}
+.mainContent__desc__articles__contact__link:hover p {
+  color: rgb(157, 192, 0);
+  transform: translateX(10px) scale(1.2) skew(-15deg);
+}
 .mainContent__desc__articles .fadeOut {
   -webkit-animation: fadeOut 100ms ease-in-out forwards 1;
           animation: fadeOut 100ms ease-in-out forwards 1;
@@ -404,8 +451,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 456ms;
-          animation-delay: 456ms;
+  -webkit-animation-delay: 624ms;
+          animation-delay: 624ms;
 }
 .loader div:nth-child(2) {
   width: 15px;
@@ -416,8 +463,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 1044ms;
-          animation-delay: 1044ms;
+  -webkit-animation-delay: 972ms;
+          animation-delay: 972ms;
 }
 .loader div:nth-child(3) {
   width: 20px;
@@ -428,8 +475,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 1032ms;
-          animation-delay: 1032ms;
+  -webkit-animation-delay: 672ms;
+          animation-delay: 672ms;
 }
 .loader div:nth-child(4) {
   width: 30px;
@@ -440,8 +487,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 420ms;
-          animation-delay: 420ms;
+  -webkit-animation-delay: 528ms;
+          animation-delay: 528ms;
 }
 .loader div:nth-child(5) {
   width: 20px;
@@ -452,8 +499,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 396ms;
-          animation-delay: 396ms;
+  -webkit-animation-delay: 24ms;
+          animation-delay: 24ms;
 }
 .loader div:nth-child(6) {
   width: 15px;
@@ -464,8 +511,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 792ms;
-          animation-delay: 792ms;
+  -webkit-animation-delay: 48ms;
+          animation-delay: 48ms;
 }
 .loader div:last-child {
   width: 10px;
@@ -476,8 +523,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 1188ms;
-          animation-delay: 1188ms;
+  -webkit-animation-delay: 180ms;
+          animation-delay: 180ms;
 }
 
 body {
@@ -492,6 +539,10 @@ body {
 main {
   width: 100%;
   height: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {

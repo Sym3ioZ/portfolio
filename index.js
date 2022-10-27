@@ -1,5 +1,9 @@
 'use strict'
 
+window.onload = (e) => {
+    displayPrez()
+}
+
 const loader = document.getElementById('loader')
 const mainContent = document.getElementById('mainContent')
 

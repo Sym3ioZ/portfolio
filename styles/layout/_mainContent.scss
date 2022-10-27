@@ -22,7 +22,7 @@
             justify-content: center;
             align-items: center;
             opacity: 0;
-            height: 20%;
+            height: 15%;
             animation: loadingFade 750ms 750ms ease-in-out forwards 1;
         }
         &__articles {
@@ -31,6 +31,7 @@
             height: 80%;
             flex-direction: column;
             justify-content: center;
+            margin-top: 10px;
             align-items: center;
             position: relative;
             opacity: 0;
@@ -100,6 +101,52 @@
                     text-align: center;
                     margin-top: 20px;
                     margin-bottom: 40px;
+                }
+            }
+            &__contact {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: baseline;
+                flex-wrap: wrap;
+                width: 90%;
+                margin-top: 20px;
+                position: absolute;
+                top: 0;
+                left: 20%;
+                color: white;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transition: all 300ms ease-in-out;
+                &__link {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 25px;
+                    & i {
+                        font-size: 60px;
+                        color: $secondaryColor;
+                        transform: scale(1);
+                        transition: all 200ms ease-out;
+                        margin-right: 20px;
+                    }
+                    & p {
+                        color: white;
+                        font-size: 36px;
+                        transform: translateX(0) scale(1) skew(0deg);
+                        transform-origin: left;
+                        transition: all 200ms ease-out;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        & i {
+                            transform: scale(1.2);
+                        }
+                        & p {
+                            color: $secondaryColor;
+                            transform: translateX(10px) scale(1.2) skew(-15deg);
+                        }
+                    }
                 }
             }
             .fadeOut {
