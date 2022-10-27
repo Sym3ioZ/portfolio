@@ -15,9 +15,9 @@ const contactTab = document.getElementById('contactTab')
 
 prezTab.addEventListener('click', displayPrez)
 techsTab.addEventListener('click', displayTechs)
-// projectsTab.addEventListener('click', displayProjects)
-// resumeTab.addEventListener('click', displayResume)
-// contactTab.addEventListener('click', displayContact)
+projectsTab.addEventListener('click', displayProjects)
+resumeTab.addEventListener('click', displayResume)
+contactTab.addEventListener('click', displayContact)
 
 function displayPrez() {
     prezBlock.classList.remove('awaiting')
@@ -61,14 +61,22 @@ function displayTechs() {
     techsBlock.classList.add('fadeIn')
     techsTab.classList.add('selected')
 
-    prezBlock.classList.remove('fadeIn')
-    prezBlock.classList.add('fadeOut')
-    projectsBlock.classList.remove('fadeIn')
-    projectsBlock.classList.add('fadeOut')
-    resumeBlock.classList.remove('fadeIn')
-    resumeBlock.classList.add('fadeOut')
-    contactBlock.classList.remove('fadeIn')
-    contactBlock.classList.add('fadeOut')
+    if (prezBlock.classList[1] != 'awaiting') {
+        prezBlock.classList.remove('fadeIn')
+        prezBlock.classList.add('fadeOut')
+    }
+    if (projectsBlock.classList[1] != 'awaiting') {
+        projectsBlock.classList.remove('fadeIn')
+        projectsBlock.classList.add('fadeOut')
+    }
+    if (resumeBlock.classList[1] != 'awaiting') {
+        resumeBlock.classList.remove('fadeIn')
+        resumeBlock.classList.add('fadeOut')
+    }
+    if (contactBlock.classList[1] != 'awaiting') {
+        contactBlock.classList.remove('fadeIn')
+        contactBlock.classList.add('fadeOut')
+    }
     prezTab.classList.remove('selected')
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
@@ -85,59 +93,113 @@ function displayTechs() {
     }, 100)
 }
 
-// function displayTechs() {
-//     prezBlock.classList.remove('fadeIn')
-//     prezBlock.classList.add('fadeOut')
-//     window.setTimeout(() => {
-//         prezBlock.classList.remove('fadeOut')
-//         prezBlock.classList.add('awaiting')
-//     }, 350)
-//     prezTab.classList.remove('selected')
-//     techsBlock.setAttribute('style', 'display: block')
-//     techsTab.classList.add('selected')
-//     projectsBlock.setAttribute('style', 'display: none')
-//     projectsTab.classList.remove('selected')
-//     resumeBlock.setAttribute('style', 'display: none')
-//     resumeTab.classList.remove('selected')
-//     contactBlock.setAttribute('style', 'display: none')
-//     contactTab.classList.remove('selected')
-// }
+function displayProjects() {
+    projectsBlock.classList.remove('awaiting')
+    projectsBlock.classList.add('fadeIn')
+    projectsTab.classList.add('selected')
 
-// function displayProjects() {
-//     prezBlock.setAttribute('style', 'display: none')
-//     prezTab.classList.remove('selected')
-//     techsBlock.setAttribute('style', 'display: none')
-//     techsTab.classList.remove('selected')
-//     projectsBlock.setAttribute('style', 'display: block')
-//     projectsTab.classList.add('selected')
-//     resumeBlock.setAttribute('style', 'display: none')
-//     resumeTab.classList.remove('selected')
-//     contactBlock.setAttribute('style', 'display: none')
-//     contactTab.classList.remove('selected')
-// }
+    if (techsBlock.classList[1] != 'awaiting') {
+        techsBlock.classList.remove('fadeIn')
+        techsBlock.classList.add('fadeOut')
+    }
+    if (prezBlock.classList[1] != 'awaiting') {
+        prezBlock.classList.remove('fadeIn')
+        prezBlock.classList.add('fadeOut')
+    }
+    if (resumeBlock.classList[1] != 'awaiting') {
+        resumeBlock.classList.remove('fadeIn')
+        resumeBlock.classList.add('fadeOut')
+    }
+    if (contactBlock.classList[1] != 'awaiting') {
+        contactBlock.classList.remove('fadeIn')
+        contactBlock.classList.add('fadeOut')
+    }
+    techsTab.classList.remove('selected')
+    prezTab.classList.remove('selected')
+    resumeTab.classList.remove('selected')
+    contactTab.classList.remove('selected')
+    window.setTimeout(() => {
+        techsBlock.classList.remove('fadeOut')
+        techsBlock.classList.add('awaiting')
+        prezBlock.classList.remove('fadeOut')
+        prezBlock.classList.add('awaiting')
+        resumeBlock.classList.remove('fadeOut')
+        resumeBlock.classList.add('awaiting')
+        contactBlock.classList.remove('fadeOut')
+        contactBlock.classList.add('awaiting')
+    }, 100)
+}
 
-// function displayResume() {
-//     prezBlock.setAttribute('style', 'display: none')
-//     prezTab.classList.remove('selected')
-//     techsBlock.setAttribute('style', 'display: none')
-//     techsTab.classList.remove('selected')
-//     projectsBlock.setAttribute('style', 'display: none')
-//     projectsTab.classList.remove('selected')
-//     resumeBlock.setAttribute('style', 'display: block')
-//     resumeTab.classList.add('selected')
-//     contactBlock.setAttribute('style', 'display: none')
-//     contactTab.classList.remove('selected')
-// }
+function displayResume() {
+    resumeBlock.classList.remove('awaiting')
+    resumeBlock.classList.add('fadeIn')
+    resumeTab.classList.add('selected')
 
-// function displayContact() {
-//     prezBlock.setAttribute('style', 'display: none')
-//     prezTab.classList.remove('selected')
-//     techsBlock.setAttribute('style', 'display: none')
-//     techsTab.classList.remove('selected')
-//     projectsBlock.setAttribute('style', 'display: none')
-//     projectsTab.classList.remove('selected')
-//     resumeBlock.setAttribute('style', 'display: none')
-//     resumeTab.classList.remove('selected')
-//     contactBlock.setAttribute('style', 'display: block')
-//     contactTab.classList.add('selected')
-// }
+    if (techsBlock.classList[1] != 'awaiting') {
+        techsBlock.classList.remove('fadeIn')
+        techsBlock.classList.add('fadeOut')
+    }
+    if (projectsBlock.classList[1] != 'awaiting') {
+        projectsBlock.classList.remove('fadeIn')
+        projectsBlock.classList.add('fadeOut')
+    }
+    if (prezBlock.classList[1] != 'awaiting') {
+        prezBlock.classList.remove('fadeIn')
+        prezBlock.classList.add('fadeOut')
+    }
+    if (contactBlock.classList[1] != 'awaiting') {
+        contactBlock.classList.remove('fadeIn')
+        contactBlock.classList.add('fadeOut')
+    }
+    techsTab.classList.remove('selected')
+    projectsTab.classList.remove('selected')
+    prezTab.classList.remove('selected')
+    contactTab.classList.remove('selected')
+    window.setTimeout(() => {
+        techsBlock.classList.remove('fadeOut')
+        techsBlock.classList.add('awaiting')
+        projectsBlock.classList.remove('fadeOut')
+        projectsBlock.classList.add('awaiting')
+        prezBlock.classList.remove('fadeOut')
+        prezBlock.classList.add('awaiting')
+        contactBlock.classList.remove('fadeOut')
+        contactBlock.classList.add('awaiting')
+    }, 100)
+}
+
+function displayContact() {
+    contactBlock.classList.remove('awaiting')
+    contactBlock.classList.add('fadeIn')
+    contactTab.classList.add('selected')
+
+    if (techsBlock.classList[1] != 'awaiting') {
+        techsBlock.classList.remove('fadeIn')
+        techsBlock.classList.add('fadeOut')
+    }
+    if (projectsBlock.classList[1] != 'awaiting') {
+        projectsBlock.classList.remove('fadeIn')
+        projectsBlock.classList.add('fadeOut')
+    }
+    if (resumeBlock.classList[1] != 'awaiting') {
+        resumeBlock.classList.remove('fadeIn')
+        resumeBlock.classList.add('fadeOut')
+    }
+    if (prezBlock.classList[1] != 'awaiting') {
+        prezBlock.classList.remove('fadeIn')
+        prezBlock.classList.add('fadeOut')
+    }
+    techsTab.classList.remove('selected')
+    projectsTab.classList.remove('selected')
+    resumeTab.classList.remove('selected')
+    prezTab.classList.remove('selected')
+    window.setTimeout(() => {
+        techsBlock.classList.remove('fadeOut')
+        techsBlock.classList.add('awaiting')
+        projectsBlock.classList.remove('fadeOut')
+        projectsBlock.classList.add('awaiting')
+        resumeBlock.classList.remove('fadeOut')
+        resumeBlock.classList.add('awaiting')
+        prezBlock.classList.remove('fadeOut')
+        prezBlock.classList.add('awaiting')
+    }, 100)
+}
