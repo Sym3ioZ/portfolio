@@ -116,6 +116,25 @@ a {
     text-decoration: none;
 }
 
+.DLbutton {
+    width: 250px;
+    height: 125px;
+    border: none;
+    border-radius: 50px 50px 50px 50px / 62px 62px 62px 62px;
+    transform: scale(1);
+    transition: all 150ms ease-out;
+    background-color: $secondaryColorA;
+    position: absolute;
+    top: 25vh;
+    right: 5vw;
+    color: white;
+    font-size: 36px;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        background-color: $secondaryColor;
+    }
+}
 h1 {
     font-size: 48px;
     color: white;

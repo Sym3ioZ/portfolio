@@ -44,6 +44,7 @@
                 margin: 20px 0 20px;
                 transform: translateX(0) translateY(0) scale(1);
                 transition: all 300ms ease-in-out;
+                transform-origin: top;
                 line-height: 150%;
                 padding: 10px;
                 text-align: justify;
@@ -62,6 +63,7 @@
                 color: white;
                 transform: translateX(0) translateY(100vh) scale(0);
                 transition: all 300ms ease-in-out;
+                transform-origin: top;
                 &__baseTechs {
                     width: 100%;
                     display: flex;
@@ -103,6 +105,33 @@
                     margin-bottom: 40px;
                 }
             }
+            &__resume {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+                position: absolute;
+                top: 0;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transition: all 300ms ease-in-out;
+                & img {
+                    width: 40%;
+                    transform: translateX(0) scale(1);
+                    transform-origin: top;
+                    z-index: 10;
+                    position: absolute;
+                    top: 0;
+                    left: 5vw;
+                    transition: all 150ms ease-out;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .zoomResume {
+                    width: 90%;
+                }
+            }
             &__contact {
                 display: flex;
                 flex-direction: column;
@@ -117,6 +146,7 @@
                 color: white;
                 transform: translateX(0) translateY(100vh) scale(0);
                 transition: all 300ms ease-in-out;
+                transform-origin: top;
                 &__link {
                     display: flex;
                     flex-direction: row;

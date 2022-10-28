@@ -18,11 +18,16 @@ const resumeTab = document.getElementById('resumeTab')
 const contactBlock = document.getElementById('contactBlock')
 const contactTab = document.getElementById('contactTab')
 
+const resumeImage = document.getElementById('resumeImage')
+const DLbutton = document.getElementById('DLbutton')
+
 prezTab.addEventListener('click', displayPrez)
 techsTab.addEventListener('click', displayTechs)
 projectsTab.addEventListener('click', displayProjects)
 resumeTab.addEventListener('click', displayResume)
 contactTab.addEventListener('click', displayContact)
+resumeImage.addEventListener('click', zoomResume)
+DLbutton.addEventListener('click', downloadResume)
 
 function displayPrez() {
     prezBlock.classList.remove('awaiting')
@@ -233,3 +238,14 @@ function displayContact() {
         prezBlock.classList.add('awaiting')
     }, 100)
 }
+
+function zoomResume() {
+    resumeImage.classList.toggle('zoomResume')
+    if (resumeImage.classList[0] == 'zoomResume') {
+        resumeImage.setAttribute('title', 'Cliquer pour réduire')
+    } else {
+        resumeImage.setAttribute('title', 'Cliquer pour agrandir')
+    }
+}
+
+function downloadResume() {}
