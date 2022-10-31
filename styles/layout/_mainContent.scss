@@ -105,6 +105,23 @@
                     margin-bottom: 40px;
                 }
             }
+            &__projects {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+                position: absolute;
+                top: 25vh;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transform-origin: top;
+                transition: all 300ms ease-in-out;
+                & div {
+                    width: 50%;
+                    height: 30vh;
+                    border: solid 5px $secondaryColor;
+                }
+            }
             &__resume {
                 display: flex;
                 flex-direction: row;
