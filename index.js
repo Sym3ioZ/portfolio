@@ -19,7 +19,10 @@ const contactBlock = document.getElementById('contactBlock')
 const contactTab = document.getElementById('contactTab')
 
 const resumeImage = document.getElementById('resumeImage')
-const DLbutton = document.getElementById('DLbutton')
+
+const carousel = document.getElementById('carousel')
+const leftCarouselArrow = document.getElementById('leftCarouselArrow')
+const rightCarouselArrow = document.getElementById('rightCarouselArrow')
 
 prezTab.addEventListener('click', displayPrez)
 techsTab.addEventListener('click', displayTechs)
@@ -27,7 +30,8 @@ projectsTab.addEventListener('click', displayProjects)
 resumeTab.addEventListener('click', displayResume)
 contactTab.addEventListener('click', displayContact)
 resumeImage.addEventListener('click', zoomResume)
-DLbutton.addEventListener('click', downloadResume)
+leftCarouselArrow.addEventListener('click', moveCarouselLeft)
+rightCarouselArrow.addEventListener('click', moveCarouselRight)
 
 function displayPrez() {
     prezBlock.classList.remove('awaiting')
@@ -248,4 +252,21 @@ function zoomResume() {
     }
 }
 
-function downloadResume() {}
+function moveCarouselLeft() {}
+
+function moveCarouselRight() {
+    let carouselContent = carousel.getElementsByClassName(
+        'mainContent__desc__articles__projects__carousel__content'
+    )
+    for (let i = 0; i < carouselContent.length; i++) {
+        if (carouselContent[i].classList[1] != 'carouselAwaiting') {
+            carouselContent[i].classList.add('carouselFadingOutLeft')
+            carouselContent[i + 1].classList.add('carouselFadingFromRight')
+            window.setTimeout(() => {
+                carouselContent[i].classList.remove('carouselFadingOutLeft')
+                carouselContent[i].classList.add('carouselAwaiting')
+                carouselContent[i + 1].classList.remove('carouselAwaiting')
+            }, 500)
+        }
+    }
+}
