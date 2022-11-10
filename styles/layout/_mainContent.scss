@@ -39,18 +39,24 @@
             &__prez {
                 display: flex;
                 position: absolute;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 width: 90%;
-                font-size: 24px;
+                height: 100%;
                 margin: 20px 0 20px;
                 transform: translateX(0) translateY(0) scale(1);
                 transition: all 300ms ease-in-out;
                 transform-origin: top;
-                line-height: 150%;
-                padding: 10px;
-                text-align: justify;
-                color: white;
-                border-radius: 20px 0 0 0;
-                box-shadow: -12px -13px 10px -10px $secondaryColorA;
+                & p {
+                    font-size: 24px;
+                    text-align: justify;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 20px 0 0 0;
+                    box-shadow: -12px -13px 10px -10px $secondaryColorA;
+                    line-height: 150%;
+                }
             }
             &__techs {
                 display: flex;
@@ -107,8 +113,8 @@
             }
             &__projects {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-around;
+                flex-direction: column;
+                justify-content: baseline;
                 align-items: center;
                 box-shadow: 0px -13px 10px -10px $secondaryColorA;
                 width: 100%;
@@ -118,71 +124,10 @@
                 transform: translateX(0) translateY(100vh) scale(0);
                 transform-origin: top;
                 transition: all 300ms ease-in-out;
-                &__carousel {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: baseline;
-                    & i {
-                        color: rgba(255, 255, 255, 0.644);
-                        margin: 25px;
-                        font-size: 52px;
-                        transform: scale(1);
-                        transition: all 200ms ease-out;
-                        &:hover {
-                            cursor: pointer;
-                            color: white;
-                            transform: scale(1.2);
-                        }
-                    }
-                    &__content {
-                        text-align: center;
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        align-items: center;
-                        transform: translateX(0) scale(1);
-                        opacity: 1;
-                        overflow: hidden;
-                        & h3 {
-                            color: white;
-                            font-size: 46px;
-                        }
-                        & h4 {
-                            color: white;
-                            font-size: 32px;
-                        }
-
-                        &__image {
-                            width: 100%;
-                            height: 100%;
-                            overflow: hidden;
-                            & iframe {
-                                background-color: white;
-                                width: 95%;
-                                height: 100%;
-                            }
-                            // & img {
-                            //     width: 100%;
-                            //     transform: scale(1);
-                            //     transform-origin: top left;
-                            //     object-fit: cover;
-                            //     transition: all 1000ms ease-out;
-                            // }
-                            // &:hover {
-                            //     & img {
-                            //         cursor: pointer;
-                            //         transform: scale(1.5);
-                            //     }
-                            // }
-                        }
-                    }
+                &__unique {
+                    width: 90%;
+                    border-radius: 20px 0 0 0;
+                    background-color: rgba(0, 0, 0, 0.45);
                 }
             }
             &__resume {

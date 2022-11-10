@@ -365,18 +365,24 @@
 .mainContent__desc__articles__prez {
   display: flex;
   position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 90%;
-  font-size: 24px;
+  height: 100%;
   margin: 20px 0 20px;
   transform: translateX(0) translateY(0) scale(1);
   transition: all 300ms ease-in-out;
   transform-origin: top;
-  line-height: 150%;
-  padding: 10px;
+}
+.mainContent__desc__articles__prez p {
+  font-size: 24px;
   text-align: justify;
   color: white;
+  padding: 10px;
   border-radius: 20px 0 0 0;
   box-shadow: -12px -13px 10px -10px rgba(157, 192, 0, 0.808);
+  line-height: 150%;
 }
 .mainContent__desc__articles__techs {
   display: flex;
@@ -433,8 +439,8 @@
 }
 .mainContent__desc__articles__projects {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: baseline;
   align-items: center;
   box-shadow: 0px -13px 10px -10px rgba(157, 192, 0, 0.808);
   width: 100%;
@@ -445,57 +451,10 @@
   transform-origin: top;
   transition: all 300ms ease-in-out;
 }
-.mainContent__desc__articles__projects__carousel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.mainContent__desc__articles__projects__carousel i {
-  color: rgba(255, 255, 255, 0.644);
-  margin: 25px;
-  font-size: 52px;
-  transform: scale(1);
-  transition: all 200ms ease-out;
-}
-.mainContent__desc__articles__projects__carousel i:hover {
-  cursor: pointer;
-  color: white;
-  transform: scale(1.2);
-}
-.mainContent__desc__articles__projects__carousel__content {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  transform: translateX(0) scale(1);
-  opacity: 1;
-  overflow: hidden;
-}
-.mainContent__desc__articles__projects__carousel__content h3 {
-  color: white;
-  font-size: 46px;
-}
-.mainContent__desc__articles__projects__carousel__content h4 {
-  color: white;
-  font-size: 32px;
-}
-.mainContent__desc__articles__projects__carousel__content__image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.mainContent__desc__articles__projects__carousel__content__image iframe {
-  background-color: white;
-  width: 95%;
-  height: 100%;
+.mainContent__desc__articles__projects__unique {
+  width: 90%;
+  border-radius: 20px 0 0 0;
+  background-color: rgba(0, 0, 0, 0.45);
 }
 .mainContent__desc__articles__resume {
   display: flex;
@@ -642,8 +601,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 720ms;
-          animation-delay: 720ms;
+  -webkit-animation-delay: 24ms;
+          animation-delay: 24ms;
 }
 .loader div:nth-child(2) {
   width: 15px;
@@ -654,8 +613,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 204ms;
-          animation-delay: 204ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 .loader div:nth-child(3) {
   width: 20px;
@@ -666,8 +625,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
+  -webkit-animation-delay: 1164ms;
+          animation-delay: 1164ms;
 }
 .loader div:nth-child(4) {
   width: 30px;
@@ -678,8 +637,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 480ms;
-          animation-delay: 480ms;
+  -webkit-animation-delay: 396ms;
+          animation-delay: 396ms;
 }
 .loader div:nth-child(5) {
   width: 20px;
@@ -690,8 +649,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 1188ms;
-          animation-delay: 1188ms;
+  -webkit-animation-delay: 816ms;
+          animation-delay: 816ms;
 }
 .loader div:nth-child(6) {
   width: 15px;
@@ -702,8 +661,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 828ms;
-          animation-delay: 828ms;
+  -webkit-animation-delay: 312ms;
+          animation-delay: 312ms;
 }
 .loader div:last-child {
   width: 10px;
@@ -714,8 +673,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 768ms;
-          animation-delay: 768ms;
+  -webkit-animation-delay: 84ms;
+          animation-delay: 84ms;
 }
 
 body {
@@ -772,6 +731,12 @@ h2 {
   font-size: 35px;
   text-align: center;
   color: rgb(157, 192, 0);
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
 }
 
 strong {
