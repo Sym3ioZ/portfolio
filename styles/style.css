@@ -434,7 +434,7 @@
 .mainContent__desc__articles__techs p {
   font-size: 28px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 .mainContent__desc__articles__projects {
@@ -468,7 +468,7 @@
   font-size: 28px;
   text-align: justify;
   color: white;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px 10px;
 }
 .mainContent__desc__articles__projects__unique__desc__image {
@@ -480,7 +480,7 @@
   padding: 10px 10px;
 }
 .mainContent__desc__articles__projects__unique__desc__buttons {
-  margin: 20px 10px;
+  margin: 25px 10px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -556,7 +556,7 @@
 .mainContent__desc__articles__contact__link {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 25px;
 }
@@ -572,6 +572,7 @@
   font-size: 36px;
   transform: translateX(0) scale(1) skew(0deg);
   transform-origin: left;
+  margin-left: 15px;
   transition: all 200ms ease-out;
 }
 .mainContent__desc__articles__contact__link:hover {
@@ -636,8 +637,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 72ms;
-          animation-delay: 72ms;
+  -webkit-animation-delay: 480ms;
+          animation-delay: 480ms;
 }
 .loader div:nth-child(2) {
   width: 15px;
@@ -648,8 +649,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 948ms;
-          animation-delay: 948ms;
+  -webkit-animation-delay: 204ms;
+          animation-delay: 204ms;
 }
 .loader div:nth-child(3) {
   width: 20px;
@@ -660,8 +661,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 756ms;
-          animation-delay: 756ms;
+  -webkit-animation-delay: 252ms;
+          animation-delay: 252ms;
 }
 .loader div:nth-child(4) {
   width: 30px;
@@ -672,8 +673,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 756ms;
-          animation-delay: 756ms;
+  -webkit-animation-delay: 552ms;
+          animation-delay: 552ms;
 }
 .loader div:nth-child(5) {
   width: 20px;
@@ -684,8 +685,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 624ms;
-          animation-delay: 624ms;
+  -webkit-animation-delay: 108ms;
+          animation-delay: 108ms;
 }
 .loader div:nth-child(6) {
   width: 15px;
@@ -696,8 +697,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 1152ms;
-          animation-delay: 1152ms;
+  -webkit-animation-delay: 1020ms;
+          animation-delay: 1020ms;
 }
 .loader div:last-child {
   width: 10px;
@@ -708,8 +709,8 @@ footer {
   margin: 0 15px;
   -webkit-animation: loadingBars 750ms ease-in-out infinite backwards alternate;
           animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-  -webkit-animation-delay: 48ms;
-          animation-delay: 48ms;
+  -webkit-animation-delay: 324ms;
+          animation-delay: 324ms;
 }
 
 body {
