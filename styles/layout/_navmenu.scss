@@ -4,6 +4,7 @@
     background-color: rgba(0, 0, 0, 0.45);
     color: white;
     opacity: 0;
+    z-index: 8;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -12,6 +13,14 @@
     top: 0;
     right: 0;
     animation: loadingFadeSlide 750ms 2250ms ease forwards 1;
+    @include mobile {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        animation: none;
+        opacity: 1;
+        transition: transform 300ms ease-in;
+        transform: translateX(100vh);
+    }
     &__profilePic {
         width: 66%;
         border-radius: 50%;
@@ -102,9 +111,9 @@
             &:hover {
                 cursor: pointer;
                 & span {
-                    font-size: 42px;
+                    font-size: 36px;
                     transform: skew(-15deg);
-                    margin-right: 10%;
+                    margin-right: 3%;
                 }
             }
         }
@@ -115,9 +124,9 @@
             border-radius: 5% 0 0 5% / 50% 0 0 50%;
         }
         & span {
-            font-size: 42px;
+            font-size: 36px;
             transform: skew(-15deg);
-            margin-right: 10%;
+            margin-right: 3%;
         }
         & i {
             transform: translateX(0) scale(1) rotate(360deg);

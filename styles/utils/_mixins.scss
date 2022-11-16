@@ -3,3 +3,21 @@
         @content;
     }
 }
+
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin xsmobile {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}

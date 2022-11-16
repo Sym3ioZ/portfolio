@@ -223,7 +223,7 @@
                 margin-top: 20px;
                 position: absolute;
                 top: 0;
-                left: 20%;
+                left: 33%;
                 color: white;
                 transform: translateX(0) translateY(100vh) scale(0);
                 transition: all 300ms ease-in-out;
@@ -235,7 +235,7 @@
                     align-items: center;
                     margin: 25px;
                     & i {
-                        font-size: 60px;
+                        font-size: 80px;
                         color: $secondaryColor;
                         transform: scale(1);
                         transition: all 200ms ease-out;
@@ -243,7 +243,7 @@
                     }
                     & p {
                         color: white;
-                        font-size: 36px;
+                        font-size: 40px;
                         transform: translateX(0) scale(1) skew(0deg);
                         transform-origin: left;
                         margin-left: 15px;

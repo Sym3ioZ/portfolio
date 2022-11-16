@@ -1,0 +1,47 @@
+.ham {
+    width: 60px;
+    height: 60px;
+    z-index: 20;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.75);
+    animation: loadingFade 750ms ease-in-out forwards 1;
+    @include mobile {
+        display: flex;
+    }
+    &__burger {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        &__bar {
+            width: 80%;
+            height: 10%;
+            border-radius: 5px;
+            background-color: white;
+            transform-origin: center;
+            opacity: 1;
+            transition: opacity 0ms 150ms ease-out;
+        }
+        #burgerBarTop {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+        #burgerBarMiddle {
+            position: absolute;
+            top: 22.5px;
+            left: 5px;
+        }
+        #burgerBarBottom {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+    }
+}

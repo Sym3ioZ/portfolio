@@ -53,44 +53,58 @@
     }
 }
 
-@keyframes fadingFromRight {
+@keyframes burgerTop {
     0% {
-        transform-origin: right;
-        transform: translateX(100vw) scale(0);
-        opacity: 0;
+        transform: translateY(0) rotate(0);
+        background-color: white;
     }
-    100% {
-        transform: translateX(0) scale(1);
-        opacity: 1;
+    50% {
+        transform: translateY(17.5px) rotate(0);
+    }
+    to {
+        transform: translateY(17.5px) rotate(45deg);
+        background-color: $secondaryColor;
     }
 }
 
-@keyframes fadingFromLeft {
+@keyframes burgerBottom {
     0% {
-        transform: translateX(-50vw) scale(0) rotateY(90deg);
+        transform: translateY(0) rotate(0);
+        background-color: white;
     }
-    100% {
-        transform: translateX(0) scale(1) rotateY(0deg);
+    50% {
+        transform: translateY(-17.5px) rotate(0);
+    }
+    to {
+        transform: translateY(-17.5px) rotate(-45deg);
+        background-color: $secondaryColor;
     }
 }
 
-@keyframes fadingOutLeft {
+@keyframes burgerTopOFF {
     0% {
-        transform-origin: left;
-        transform: translateX(0) scale(1);
-        opacity: 1;
+        transform: translateY(17.5px) rotate(45deg);
+        background-color: $secondaryColor;
     }
-    100% {
-        transform: translateX(-100vw) scale(0);
-        opacity: 0;
+    50% {
+        transform: translateY(17.5px) rotate(0);
+    }
+    to {
+        transform: translateY(0) rotate(0);
+        background-color: white;
     }
 }
 
-@keyframes fadingOutRight {
+@keyframes burgerBottomOFF {
     0% {
-        transform: translateX(0) scale(1) rotateY(0deg);
+        transform: translateY(-17.5px) rotate(-45deg);
+        background-color: $secondaryColor;
     }
-    100% {
-        transform: translateX(50vw) scale(0) rotateY(-90deg);
+    50% {
+        transform: translateY(-17.5px) rotate(0);
+    }
+    to {
+        transform: translateY(0) rotate(0);
+        background-color: white;
     }
 }

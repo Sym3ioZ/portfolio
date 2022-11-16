@@ -1,11 +1,38 @@
 'use strict'
 
+let burgerCheck
+
 window.onload = (e) => {
     displayPrez()
+    burgerCheck = false
 }
 
 const loader = document.getElementById('loader')
 const mainContent = document.getElementById('mainContent')
+const navmenu = document.getElementById('navmenu')
+
+const burger = document.getElementById('burger')
+const burgerBarTop = document.getElementById('burgerBarTop')
+const burgerBarmiddle = document.getElementById('burgerBarMiddle')
+const burgerBarBottom = document.getElementById('burgerBarBottom')
+burger.addEventListener('click', burgerToggle)
+
+function burgerToggle() {
+    if (burgerCheck == false) {
+        burgerBarTop.style.animation = 'burgerTop 300ms ease-out forwards'
+        burgerBarBottom.style.animation = 'burgerBottom 300ms ease-out forwards'
+        burgerBarmiddle.style.opacity = '0'
+        navmenu.style.transform = 'translateX(0)'
+        burgerCheck = true
+    } else {
+        burgerBarTop.style.animation = 'burgerTopOFF 300ms ease-out forwards'
+        burgerBarBottom.style.animation =
+            'burgerBottomOFF 300ms ease-out forwards'
+        burgerBarmiddle.style.opacity = '1'
+        navmenu.style.transform = 'translateX(100vh)'
+        burgerCheck = false
+    }
+}
 
 const prezBlock = document.getElementById('prezBlock')
 const prezTab = document.getElementById('prezTab')

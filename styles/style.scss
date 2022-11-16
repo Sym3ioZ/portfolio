@@ -2,95 +2,15 @@
 @import './utils/keyframes';
 @import './utils/mixins';
 @import './components/loader';
+@import './components/button';
+@import './components/burger';
 @import './layout/navmenu';
 @import './layout/mainContent';
-@import './layout/footer';
 
 * {
     font-family: 'Play', sans-serif;
     box-sizing: border-box;
     margin: 0;
-}
-
-.loader {
-    z-index: 50;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    opacity: 1;
-    animation: loaderFade 1000ms 2000ms linear forwards;
-    & div:first-child {
-        width: 10px;
-        height: 40px;
-        background-color: lighten($secondaryColor, 33%);
-        border-radius: 5px 5px 5px 5px;
-        transform: scaleY(0);
-        margin: 0 15px;
-        animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-        animation-delay: random(100) * 12ms;
-    }
-    & div:nth-child(2) {
-        width: 15px;
-        height: 55px;
-        background-color: lighten($secondaryColor, 25%);
-        border-radius: 7px 7px 7px 7px;
-        transform: scaleY(0);
-        margin: 0 15px;
-        animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-        animation-delay: random(100) * 12ms;
-    }
-    & div:nth-child(3) {
-        width: 20px;
-        height: 66px;
-        background-color: lighten($secondaryColor, 20%);
-        border-radius: 10px 10px 10px 10px;
-        transform: scaleY(0);
-        margin: 0 15px;
-        animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-        animation-delay: random(100) * 12ms;
-    }
-    & div:nth-child(4) {
-        width: 30px;
-        height: 80px;
-        background-color: $secondaryColor;
-        border-radius: 15px 15px 15px 15px;
-        transform: scaleY(0);
-        margin: 0 15px;
-        animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-        animation-delay: random(100) * 12ms;
-    }
-    & div:nth-child(5) {
-        width: 20px;
-        height: 66px;
-        background-color: lighten($secondaryColor, 25%);
-        border-radius: 10px 10px 10px 10px;
-        transform: scaleY(0);
-        margin: 0 15px;
-        animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-        animation-delay: random(100) * 12ms;
-    }
-    & div:nth-child(6) {
-        width: 15px;
-        height: 55px;
-        background-color: lighten($secondaryColor, 20%);
-        border-radius: 7px 7px 7px 7px;
-        transform: scaleY(0);
-        margin: 0 15px;
-        animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-        animation-delay: random(100) * 12ms;
-    }
-    & div:last-child {
-        width: 10px;
-        height: 40px;
-        background-color: lighten($secondaryColor, 33%);
-        border-radius: 5px 5px 5px 5px;
-        transform: scaleY(0);
-        margin: 0 15px;
-        animation: loadingBars 750ms ease-in-out infinite backwards alternate;
-        animation-delay: random(100) * 12ms;
-    }
 }
 
 body {
@@ -116,31 +36,6 @@ a {
     text-decoration: none;
 }
 
-.DLbutton {
-    width: 250px;
-    height: 125px;
-    border: none;
-    border-radius: 50px 50px 50px 50px / 62px 62px 62px 62px;
-    transform: scale(1);
-    transition: all 150ms ease-out;
-    background-color: $secondaryColorA;
-    position: absolute;
-    top: 25vh;
-    right: 5vw;
-    color: white;
-    font-size: 32px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.15);
-        background-color: $secondaryColor;
-        box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
-    }
-}
 h1 {
     font-size: 48px;
     color: white;
