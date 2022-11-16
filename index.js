@@ -3,8 +3,8 @@
 let burgerCheck
 
 window.onload = (e) => {
+    burgerCheck = true
     displayPrez()
-    burgerCheck = false
 }
 
 const loader = document.getElementById('loader')
@@ -94,6 +94,7 @@ function displayPrez() {
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
     }, 100)
+    burgerToggle()
 }
 
 function displayTechs() {
@@ -136,6 +137,7 @@ function displayTechs() {
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
     }, 100)
+    burgerToggle()
 }
 
 function displayProjects() {
@@ -178,6 +180,7 @@ function displayProjects() {
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
     }, 100)
+    burgerToggle()
 }
 
 function displayResume() {
@@ -220,6 +223,7 @@ function displayResume() {
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
     }, 100)
+    burgerToggle()
 }
 
 function displayContact() {
@@ -262,13 +266,17 @@ function displayContact() {
         prezBlock.classList.remove('fadeOut')
         prezBlock.classList.add('awaiting')
     }, 100)
+    burgerToggle()
 }
 
 function zoomResume() {
-    resumeImage.classList.toggle('zoomResume')
-    if (resumeImage.classList[0] == 'zoomResume') {
-        resumeImage.setAttribute('title', 'Cliquer pour réduire')
-    } else {
-        resumeImage.setAttribute('title', 'Cliquer pour agrandir')
+    if (window.innerWidth > 768) {
+        console.log('in function')
+        resumeImage.classList.toggle('zoomResume')
+        if (resumeImage.classList[0] == 'zoomResume') {
+            resumeImage.setAttribute('title', 'Cliquer pour réduire')
+        } else {
+            resumeImage.setAttribute('title', 'Cliquer pour agrandir')
+        }
     }
 }

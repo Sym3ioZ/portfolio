@@ -59,10 +59,10 @@
         background-color: white;
     }
     50% {
-        transform: translateY(17.5px) rotate(0);
+        transform: translateY(13px) rotate(0);
     }
     to {
-        transform: translateY(17.5px) rotate(45deg);
+        transform: translateY(13px) rotate(45deg);
         background-color: $secondaryColor;
     }
 }
@@ -73,21 +73,21 @@
         background-color: white;
     }
     50% {
-        transform: translateY(-17.5px) rotate(0);
+        transform: translateY(-13px) rotate(0);
     }
     to {
-        transform: translateY(-17.5px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
         background-color: $secondaryColor;
     }
 }
 
 @keyframes burgerTopOFF {
     0% {
-        transform: translateY(17.5px) rotate(45deg);
+        transform: translateY(13px) rotate(45deg);
         background-color: $secondaryColor;
     }
     50% {
-        transform: translateY(17.5px) rotate(0);
+        transform: translateY(13px) rotate(0);
     }
     to {
         transform: translateY(0) rotate(0);
@@ -97,11 +97,11 @@
 
 @keyframes burgerBottomOFF {
     0% {
-        transform: translateY(-17.5px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
         background-color: $secondaryColor;
     }
     50% {
-        transform: translateY(-17.5px) rotate(0);
+        transform: translateY(-13px) rotate(0);
     }
     to {
         transform: translateY(0) rotate(0);

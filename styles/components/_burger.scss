@@ -1,23 +1,25 @@
 .ham {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     z-index: 20;
     position: absolute;
     display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    top: 10px;
-    right: 10px;
+    opacity: 0;
+    padding: 5px;
+    top: 5px;
+    right: 5px;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.75);
-    animation: loadingFade 750ms ease-in-out forwards 1;
+    background-color: rgba(0, 0, 0, 0.3);
     @include mobile {
         display: flex;
+        animation: loadingFade 750ms 2250ms ease-in-out forwards 1;
     }
     &__burger {
-        width: 50px;
-        height: 50px;
+        width: 100%;
+        height: 100%;
         position: relative;
         &__bar {
             width: 80%;
@@ -35,7 +37,7 @@
         }
         #burgerBarMiddle {
             position: absolute;
-            top: 22.5px;
+            top: 18px;
             left: 5px;
         }
         #burgerBarBottom {

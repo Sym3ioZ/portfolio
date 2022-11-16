@@ -9,6 +9,9 @@
     padding-right: -20px;
     overflow-x: hidden;
     -ms-overflow-style: none;
+    @include mobile {
+        width: 100%;
+    }
     &__desc {
         width: 100%;
         height: 100%;
@@ -21,9 +24,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%;
             opacity: 0;
             height: 15%;
             animation: loadingFade 750ms 750ms ease-in-out forwards 1;
+            @include mobile {
+                align-items: flex-start;
+                margin-left: 7px;
+                h2 {
+                    margin-left: 75px;
+                }
+            }
         }
         &__articles {
             display: flex;
@@ -42,12 +53,15 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                top: 0;
                 width: 90%;
-                height: 100%;
                 margin: 20px 0 20px;
                 transform: translateX(0) translateY(0) scale(1);
                 transition: all 300ms ease-in-out;
                 transform-origin: top;
+                @include mobile {
+                    width: 100%;
+                }
                 & p {
                     font-size: 28px;
                     text-align: justify;
@@ -56,6 +70,11 @@
                     border-radius: 20px 0 0 0;
                     box-shadow: -12px -13px 10px -10px $secondaryColorA;
                     line-height: 150%;
+                    @include mobile {
+                        font-size: 18px;
+                        border-radius: 0;
+                        box-shadow: 0 -13px 10px -10px $secondaryColorA;
+                    }
                 }
             }
             &__techs {
@@ -70,45 +89,72 @@
                 transform: translateX(0) translateY(100vh) scale(0);
                 transition: all 300ms ease-in-out;
                 transform-origin: top;
+                @include mobile {
+                    width: 100%;
+                }
                 &__baseTechs {
                     width: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     align-items: center;
                     padding-top: 10px;
                     border-radius: 20px 0 0 0;
                     box-shadow: -12px -13px 10px -10px $secondaryColorA;
+                    @include mobile {
+                        border-radius: 0;
+                        box-shadow: 0px -13px 10px -10px $secondaryColorA;
+                    }
                 }
                 &__advancedTechs {
                     width: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     align-items: center;
                     margin-top: 20px;
                     padding-top: 10px;
                     border-radius: 20px 0 0 0;
                     box-shadow: -12px -13px 10px -10px $secondaryColorA;
+                    @include mobile {
+                        border-radius: 0;
+                        box-shadow: 0px -13px 10px -10px $secondaryColorA;
+                    }
+                }
+                &__misc {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 20px;
+                    padding-top: 10px;
+                    border-radius: 0;
+                    box-shadow: 0 -13px 10px -10px $secondaryColorA;
                 }
                 & i {
                     display: flex;
                     flex-direction: column;
                     text-align: center;
                     font-size: 75px;
+                    margin-top: 10px;
                     margin-left: 20px;
-                    & span {
-                        text-align: center;
-                        font-size: 48px;
-                        color: $secondaryColor;
-                        font-weight: normal;
+                    @include mobile {
+                        font-size: 50px;
+                        margin-left: 0;
                     }
                 }
                 & p {
+                    width: 100%;
                     font-size: 28px;
-                    text-align: center;
+                    text-align: justify;
                     margin-top: 30px;
                     margin-bottom: 40px;
+                    @include mobile {
+                        font-size: 18px;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
                 }
             }
             &__projects {
@@ -128,6 +174,10 @@
                     margin: 30px 0;
                     border-radius: 20px;
                     background-color: rgba(0, 0, 0, 0.45);
+                    @include mobile {
+                        width: 100%;
+                        border-radius: 0;
+                    }
                     &__desc {
                         width: 100%;
                         display: flex;
@@ -141,6 +191,9 @@
                             color: white;
                             margin-top: 20px;
                             padding: 10px 10px;
+                            @include mobile {
+                                font-size: 18px;
+                            }
                         }
                         &__image {
                             width: 100%;
@@ -196,6 +249,12 @@
                 top: 0;
                 transform: translateX(0) translateY(100vh) scale(0);
                 transition: all 300ms ease-in-out;
+                @include mobile {
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
                 & img {
                     width: 40%;
                     transform: translateX(0) scale(1);
@@ -208,9 +267,19 @@
                     &:hover {
                         cursor: pointer;
                     }
+                    @include mobile {
+                        z-index: 1;
+                        width: 100%;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                    }
                 }
                 .zoomResume {
                     width: 90%;
+                    @include mobile {
+                        width: 100%;
+                    }
                 }
             }
             &__contact {
@@ -220,26 +289,34 @@
                 align-items: baseline;
                 flex-wrap: wrap;
                 width: 90%;
-                margin-top: 20px;
+                margin-top: 10px;
                 position: absolute;
                 top: 0;
-                left: 33%;
                 color: white;
                 transform: translateX(0) translateY(100vh) scale(0);
                 transition: all 300ms ease-in-out;
                 transform-origin: top;
+                @include mobile {
+                    width: 100%;
+                }
                 &__link {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
-                    margin: 25px;
+                    margin: 10px;
+                    @include mobile {
+                        margin: 20px 10px;
+                    }
                     & i {
                         font-size: 80px;
                         color: $secondaryColor;
                         transform: scale(1);
                         transition: all 200ms ease-out;
                         margin-right: 20px;
+                        @include mobile {
+                            font-size: 50px;
+                        }
                     }
                     & p {
                         color: white;
@@ -248,15 +325,26 @@
                         transform-origin: left;
                         margin-left: 15px;
                         transition: all 200ms ease-out;
+                        @include mobile {
+                            font-size: 22px;
+                            margin-left: 0px;
+                        }
                     }
                     &:hover {
                         cursor: pointer;
                         & i {
                             transform: scale(1.2);
+                            @include mobile {
+                                transform: scale(1.15);
+                            }
                         }
                         & p {
                             color: $secondaryColor;
                             transform: translateX(10px) scale(1.2) skew(-15deg);
+                            @include mobile {
+                                transform: translateX(5px) scale(1.1)
+                                    skew(-15deg);
+                            }
                         }
                     }
                 }
