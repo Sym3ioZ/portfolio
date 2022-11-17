@@ -1,0 +1,23 @@
+@mixin lores {
+    @media screen and (max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin xsmobile {
+    @media screen and (max-width: 359px) {
+        @content;
+    }
+}

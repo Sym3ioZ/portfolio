@@ -1,5 +1,188 @@
 .navmenu {
-    width: 30vw;
-    background-color: rgba(0, 0, 0, 0.541);
-    color: red;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    opacity: 0;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: loadingFadeSlide 750ms 4250ms ease forwards 1;
+    @include mobile {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        animation: none;
+        opacity: 1;
+        transition: transform 300ms ease-out;
+        transform: translateX(100vh);
+    }
+    &__profilePic {
+        width: 66%;
+        border-radius: 50%;
+        margin-top: 20px;
+        box-shadow: 0px 0px 25px 2px $primaryColor;
+        overflow: hidden;
+        position: relative;
+        @include mobile {
+            width: 45%;
+        }
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+        &__blazeFX1 {
+            width: 3%;
+            height: 100%;
+            transform: skew(15deg);
+            background-color: $secondaryColorA;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+        }
+        &__blazeFX2 {
+            width: 7%;
+            height: 100%;
+            transform: skew(15deg);
+            background-color: $secondaryColorA;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            z-index: 5;
+        }
+        &__blazeFX3 {
+            width: 4%;
+            height: 100%;
+            transform: skew(15deg);
+            background-color: $secondaryColorA;
+            opacity: 0.4;
+            position: absolute;
+            top: 0;
+            left: 15%;
+            z-index: 5;
+        }
+    }
+    &__name {
+        display: none;
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            p:first-child {
+                font-size: 32px;
+            }
+            p:last-child {
+                font-size: 28px;
+                color: $secondaryColor;
+            }
+        }
+        @include xsmobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            p:first-child {
+                font-size: 26px;
+            }
+            p:last-child {
+                font-size: 20px;
+                color: $secondaryColor;
+            }
+        }
+    }
+    &__tabs {
+        width: 100%;
+        height: 66%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__unique {
+            height: 12%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 250ms ease-in-out;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                transform: translateX(100%);
+                transform-origin: left;
+                transition: all 250ms ease-in-out;
+                background-color: $secondaryColor;
+                position: absolute;
+            }
+            & i {
+                color: white;
+                position: absolute;
+                left: 5%;
+                transform: translateX(20vw) scale(0) rotate(0deg);
+                font-size: 24px;
+                transition: all 250ms ease-in-out;
+                @include xsmobile {
+                    font-size: 20px;
+                }
+            }
+            & span {
+                font-size: 28px;
+                text-align: center;
+                transform: skew(0deg);
+                position: absolute;
+                right: 3%;
+                transition: all 200ms 50ms ease-in-out;
+                @include xsmobile {
+                    font-size: 24px;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                & span {
+                    font-size: 36px;
+                    transform: skew(-15deg);
+                    margin-right: 3%;
+                    @include xsmobile {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .selected {
+        &::before {
+            transform: translateX(0);
+            border-radius: 5% 0 0 5% / 50% 0 0 50%;
+        }
+        & span {
+            font-size: 36px;
+            transform: skew(-15deg);
+            margin-right: 3%;
+            @include xsmobile {
+                font-size: 30px;
+            }
+        }
+        & i {
+            transform: translateX(0) scale(1) rotate(360deg);
+        }
+    }
+    &__credits {
+        margin-bottom: 10px;
+        @include xsmobile {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    }
 }

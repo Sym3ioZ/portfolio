@@ -1,14 +1,453 @@
 .mainContent {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 100vh;
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    padding-right: -20px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    @include mobile {
+        width: 100%;
+    }
     &__desc {
-        width: 70vw;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: baseline;
+        justify-content: space-between;
         align-items: center;
+        &__titles {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            opacity: 0;
+            height: 15%;
+            animation: loadingFade 500ms 3000ms ease-in-out forwards 1;
+            @include mobile {
+                align-items: flex-start;
+                margin-left: 10px;
+                h2 {
+                    margin-left: 75px;
+                }
+            }
+            @include xsmobile {
+                margin-top: 20px;
+                align-items: flex-start;
+                margin-left: 5px;
+                h2 {
+                    margin-left: 66px;
+                }
+            }
+        }
+        &__articles {
+            display: flex;
+            width: 100%;
+            height: 80%;
+            flex-direction: column;
+            justify-content: baseline;
+            margin-top: 10px;
+            align-items: center;
+            position: relative;
+            opacity: 0;
+            animation: loadingFade 500ms 3750ms ease-in-out forwards 1;
+            @include xsmobile {
+                margin: 0;
+            }
+            &__prez {
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                top: 0;
+                width: 90%;
+                margin: 20px 0 20px;
+                transform: translateX(0) translateY(0) scale(1);
+                transition: all 300ms ease-in-out;
+                transform-origin: top;
+                @include mobile {
+                    width: 100%;
+                }
+                @include xsmobile {
+                    width: 100%;
+                }
+                & p {
+                    font-size: 28px;
+                    text-align: justify;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 20px 0 0 0;
+                    box-shadow: -12px -13px 10px -10px $secondaryColorA;
+                    line-height: 150%;
+                    @include mobile {
+                        font-size: 18px;
+                        border-radius: 0;
+                        box-shadow: 0 -13px 10px -10px $secondaryColorA;
+                    }
+                    @include xsmobile {
+                        font-size: 14px;
+                        line-height: 140%;
+                        border-radius: 0;
+                        box-shadow: 0 -13px 10px -10px $secondaryColorA;
+                    }
+                }
+            }
+            &__techs {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+                position: absolute;
+                top: 0;
+                color: white;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transition: all 300ms ease-in-out;
+                transform-origin: top;
+                @include mobile {
+                    width: 100%;
+                }
+                @include xsmobile {
+                    width: 100%;
+                }
+                &__baseTechs {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-radius: 20px 0 0 0;
+                    box-shadow: -12px -13px 10px -10px $secondaryColorA;
+                    @include mobile {
+                        border-radius: 0;
+                        box-shadow: 0px -13px 10px -10px $secondaryColorA;
+                    }
+                    @include xsmobile {
+                        margin-top: 0;
+                    }
+                }
+                &__advancedTechs {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 15px;
+                    border-radius: 20px 0 0 0;
+                    box-shadow: -12px -13px 10px -10px $secondaryColorA;
+                    @include mobile {
+                        border-radius: 0;
+                        box-shadow: 0px -13px 10px -10px $secondaryColorA;
+                    }
+                    @include xsmobile {
+                        margin-top: 0;
+                    }
+                }
+                &__misc {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-top: 20px;
+                    padding-top: 10px;
+                    border-radius: 0;
+                    box-shadow: 0 -13px 10px -10px $secondaryColorA;
+                    @include xsmobile {
+                        margin-top: 0;
+                    }
+                }
+                & i {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-size: 75px;
+                    margin-top: 10px;
+                    @include mobile {
+                        font-size: 50px;
+                    }
+                    @include xsmobile {
+                        font-size: 40px;
+                    }
+                }
+                & p {
+                    width: 100%;
+                    font-size: 28px;
+                    text-align: justify;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    @include mobile {
+                        font-size: 18px;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                    @include xsmobile {
+                        font-size: 14px;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                }
+            }
+            &__projects {
+                display: flex;
+                flex-direction: column;
+                justify-content: baseline;
+                align-items: center;
+                box-shadow: 0px -13px 10px -10px $secondaryColorA;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transform-origin: top;
+                transition: all 300ms ease-in-out;
+                &__unique {
+                    width: 95%;
+                    margin: 30px 0;
+                    border-radius: 20px;
+                    background-color: rgba(0, 0, 0, 0.45);
+                    @include mobile {
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                    &__desc {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        &__text {
+                            box-shadow: 0px -13px 10px -10px $secondaryColorA;
+                            font-size: 28px;
+                            text-align: justify;
+                            color: white;
+                            margin-top: 20px;
+                            padding: 10px 10px;
+                            @include mobile {
+                                font-size: 18px;
+                            }
+                            @include xsmobile {
+                                font-size: 14px;
+                                padding: 5px 5px;
+                            }
+                        }
+                        &__image {
+                            width: 100%;
+                            padding: 10px 10px 0 10px;
+                            @include mobile {
+                                display: none;
+                            }
+                        }
+                        &__mobileImage {
+                            width: 100%;
+                            padding-top: 10px;
+                            display: none;
+                            @include mobile {
+                                display: block;
+                            }
+                        }
+                        &__video {
+                            width: 100%;
+                            padding: 10px 10px;
+                            @include mobile {
+                                display: none;
+                            }
+                        }
+                        &__mobileVideo {
+                            display: none;
+                            width: 100%;
+                            padding-top: 10px;
+                            @include mobile {
+                                display: block;
+                            }
+                        }
+                        &__buttons {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+                            & .projectButton {
+                                text-decoration: none;
+                                width: 200px;
+                                height: 100px;
+                                border: none;
+                                border-radius: 50px 50px 50px 50px / 62px 62px
+                                    62px 62px;
+                                transform: scale(1);
+                                transition: all 150ms ease-out;
+                                background-color: $secondaryColorA;
+                                color: white;
+                                margin: 20px 0;
+                                font-size: 32px;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                @include mobile {
+                                    width: 125px;
+                                    height: 65px;
+                                    font-size: 24px;
+                                }
+                                @include xsmobile {
+                                    width: 100px;
+                                    height: 50px;
+                                    font-size: 20px;
+                                }
+                                &:hover {
+                                    cursor: pointer;
+                                    transform: scale(1.15);
+                                    background-color: $secondaryColor;
+                                    box-shadow: 0px 3px 3px 3px
+                                        rgba(0, 0, 0, 0.2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__resume {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+                position: absolute;
+                top: 0;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transition: all 300ms ease-in-out;
+                transform-origin: top;
+                @include mobile {
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                & img {
+                    width: 40%;
+                    transform: translateX(0) scale(1);
+                    transform-origin: top;
+                    z-index: 10;
+                    position: absolute;
+                    top: 0;
+                    left: 5vw;
+                    transition: all 150ms ease-out;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    @include mobile {
+                        z-index: 1;
+                        width: 100%;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                .zoomResume {
+                    width: 90%;
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+            }
+            &__contact {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: baseline;
+                flex-wrap: wrap;
+                width: 90%;
+                margin-top: 10px;
+                position: absolute;
+                top: 0;
+                color: white;
+                transform: translateX(0) translateY(100vh) scale(0);
+                transition: all 300ms ease-in-out;
+                transform-origin: top;
+                @include mobile {
+                    width: 100%;
+                }
+                &__link {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 10px;
+                    @include mobile {
+                        margin: 20px 10px;
+                    }
+                    @include xsmobile {
+                        margin: 10px 5px;
+                    }
+                    & i {
+                        font-size: 80px;
+                        color: $secondaryColor;
+                        transform: scale(1);
+                        transition: all 200ms ease-out;
+                        margin-right: 20px;
+                        @include mobile {
+                            font-size: 50px;
+                        }
+                        @include xsmobile {
+                            font-size: 35px;
+                        }
+                    }
+                    & p {
+                        color: white;
+                        font-size: 40px;
+                        transform: translateX(0) scale(1) skew(0deg);
+                        transform-origin: left;
+                        margin-left: 15px;
+                        transition: all 200ms ease-out;
+                        @include mobile {
+                            font-size: 22px;
+                            margin-left: 0px;
+                        }
+                        @include xsmobile {
+                            font-size: 16px;
+                            margin-left: 0px;
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        & i {
+                            transform: scale(1.2);
+                            @include mobile {
+                                transform: scale(1.15);
+                            }
+                            @include xsmobile {
+                                transform: scale(1.1);
+                            }
+                        }
+                        & p {
+                            color: $secondaryColor;
+                            transform: translateX(10px) scale(1.2) skew(-15deg);
+                            @include mobile {
+                                transform: translateX(5px) scale(1.1)
+                                    skew(-15deg);
+                            }
+                            @include xsmobile {
+                                transform: translateX(3px) scale(1.08)
+                                    skew(-15deg);
+                            }
+                        }
+                    }
+                }
+            }
+            .fadeOut {
+                animation: fadeOut 300ms ease-in-out forwards 1;
+            }
+            .fadeIn {
+                transform: translateX(0) translateY(0) scale(1);
+            }
+            .awaiting {
+                transform: translateX(0) translateY(100vh) scale(0);
+            }
+        }
     }
 }

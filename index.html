@@ -4,12 +4,20 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
-            description="Présentation de Benoit TORTEVOIS - Junior WEB Developper"
+            description="Présentation de Benoit TORTEVOIS - Développeur WEB"
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Benoit TORTEVOIS - WEB Developper</title>
+        <title>Benoit TORTEVOIS - Développeur WEB</title>
+        <script
+            src="https://kit.fontawesome.com/968d4dd58f.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+        <link
+            rel="icon"
+            href="./assets/icons8-internet-32.png"
+            type="image/x-icon"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -17,24 +25,607 @@
             rel="stylesheet"
         />
     </head>
+
     <body>
-        <div class="WIP">
-            <img src="./assets/WIP.png" alt="Work in progress panel" />
-            <p>
-                Site en construction <br />
-                Bientôt disponible
-            </p>
+        <div class="loader" id="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
         <main>
-            <div class="mainContent">
+            <div class="mainContent" id="mainContent">
                 <div class="mainContent__desc">
-                    <h1>Benoit TORTEVOIS</h1>
-                    <h2>WEB Developper</h2>
+                    <div
+                        class="mainContent__desc__titles"
+                        id="mainContent__desc__titles"
+                    >
+                        <h1>Benoit TORTEVOIS</h1>
+                        <h2>Développeur WEB</h2>
+                    </div>
+                    <div
+                        class="mainContent__desc__articles"
+                        id="mainContent__desc__articles"
+                    >
+                        <article
+                            class="mainContent__desc__articles__prez"
+                            id="prezBlock"
+                        >
+                            <p>
+                                Jeune diplômé de la formation développeur WEB
+                                dispensée par OpenClassrooms. <br />
+                                Passionné d'informatique et de nouvelles
+                                technologies, autodidacte, curieux et
+                                débrouillard.
+                                <br />
+                                Compétent du frontend au backend, en passant par
+                                le prototypage ou encore la gestion de bases de
+                                données.
+                                <br /><br />
+
+                                Cette formation m'a permis de découvrir la
+                                conception de sites et applications WEB. De
+                                l'intégration de maquettes, à la réalisation
+                                d'une application complète de A à Z, en passant
+                                par l'apprentissage de la SEO ou encore la
+                                découverte des animations CSS, j'ai parcouru bon
+                                nombre de technologies et méthodes de travail
+                                qui m'ont forgé et me permettent aujourd'hui de
+                                proposer mes compétences variées à toute
+                                entreprise cherchant un développeur talentueux
+                                et complet.
+                            </p>
+                        </article>
+                        <article
+                            class="mainContent__desc__articles__techs"
+                            id="techsBlock"
+                        >
+                            <div
+                                class="mainContent__desc__articles__techs__baseTechs"
+                            >
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-sass"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <p>
+                                Les bases du développement WEB:
+                                <strong>HTML</strong> et <strong>CSS</strong>,
+                                associés au <strong>Javascript</strong>. Ce sont
+                                d'ailleurs ces 3 technologies qui vous
+                                permettent de consulter ce site.
+                            </p>
+
+                            <div
+                                class="mainContent__desc__articles__techs__advancedTechs"
+                            >
+                                <i class="fa-brands fa-react"></i>
+                                <i class="fa-brands fa-node"></i>
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <p>
+                                Pour le développement d'API ou d'applications
+                                complètes, je sais m'appuyer sur ces valeurs
+                                sûres: <br />
+                                Le framework <strong>REACT</strong> pour un
+                                développement du frontend complet, puissant et
+                                rapide. <br />
+                                L'association <strong>NODE.js</strong> +
+                                <strong>Express</strong> pour une gestion du
+                                backend simple et fiable. <br />
+                                L'utilisation de bases de données relationnelles
+                                (<strong>MySQL</strong>) ou bien orientées
+                                documents (<strong>mongoDB</strong>).
+                            </p>
+
+                            <div
+                                class="mainContent__desc__articles__techs__misc"
+                            >
+                                <p>
+                                    J'ai également appris à utiliser de
+                                    nombreuses autres technologies ou techniques
+                                    de travail. <br />
+                                    Je pense notamment au gestionnaire de
+                                    paquets <strong>NPM</strong>, à l'appui des
+                                    tests réalisés avec
+                                    <strong>Postman</strong> pour vérifier le
+                                    fonctionnement de son
+                                    <strong>API</strong> par exemple, ou encore
+                                    les bonnes pratiques en terme de
+                                    <strong>responsive design</strong>, le
+                                    respect des critères d'accessibilité du
+                                    <strong>W3C</strong> ou la mise en oeuvre
+                                    d'une politique
+                                    <strong>SEO</strong> efficace.
+                                </p>
+                            </div>
+                        </article>
+                        <article
+                            class="mainContent__desc__articles__projects"
+                            id="projectsBlock"
+                        >
+                            <h3>Projets professionnels</h3>
+                            <div
+                                class="mainContent__desc__articles__projects__unique"
+                            >
+                                <h4>BOOKI - Site de réservation de vacances</h4>
+                                <h5>
+                                    Transformer une maquette en site WEB avec
+                                    HTML et CSS
+                                </h5>
+                                <div
+                                    class="mainContent__desc__articles__projects__unique__desc"
+                                >
+                                    <p
+                                        class="mainContent__desc__articles__projects__unique__desc__text"
+                                    >
+                                        Le premier projet de ma formation m'a
+                                        amené à apprendre le HTML et le CSS, en
+                                        découpant une maquette (desktop et
+                                        mobile) afin de l'intégrer sous forme de
+                                        site WEB.<br />
+                                        L'occasion d'apprendre les bases du
+                                        frontend, notamment le balisage HTML et
+                                        sa sémantique, l'organisation de
+                                        contenu, ou encore la découverte du
+                                        potentiel de CSS, avec les effets et
+                                        l'utilisation de Flexbox notamment.
+                                    </p>
+                                    <img
+                                        class="mainContent__desc__articles__projects__unique__desc__image"
+                                        src="./assets/P1_booki.webp"
+                                        alt="snapshot projet 1 booki"
+                                    />
+                                    <img
+                                        class="mainContent__desc__articles__projects__unique__desc__mobileImage"
+                                        src="./assets/P1_booki_mobile.webp"
+                                        alt="snapshot projet 1 booki"
+                                    />
+                                    <div
+                                        class="mainContent__desc__articles__projects__unique__desc__buttons"
+                                    >
+                                        <a
+                                            class="projectButton"
+                                            href="https://github.com/Sym3ioZ/booki"
+                                            target="_blank"
+                                        >
+                                            <span>CODE</span>
+                                        </a>
+                                        <a
+                                            class="projectButton"
+                                            href="https://sym3ioz.github.io/booki/"
+                                            target="_blank"
+                                        >
+                                            <span>DEMO</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="mainContent__desc__articles__projects__unique"
+                            >
+                                <h4>
+                                    OHMYFOOD - Application de réservation de
+                                    menus
+                                </h4>
+                                <h5>
+                                    Dynamiser un site WEB avec les animations
+                                    CSS
+                                </h5>
+                                <div
+                                    class="mainContent__desc__articles__projects__unique__desc"
+                                >
+                                    <p
+                                        class="mainContent__desc__articles__projects__unique__desc__text"
+                                    >
+                                        Ce deuxième projet adoptait une approche
+                                        "mobile-first". J'ai découvert les
+                                        animations et transitions CSS et la
+                                        création d'un site multi-pages.
+                                    </p>
+                                    <img
+                                        class="mainContent__desc__articles__projects__unique__desc__image"
+                                        src="./assets/P2_ohmyfood.webp"
+                                        alt="snapshot projet 2 ohmyfood"
+                                    />
+                                    <img
+                                        class="mainContent__desc__articles__projects__unique__desc__mobileImage"
+                                        src="./assets/P2_ohmyfood_mobile.webp"
+                                        alt="snapshot projet 1 booki"
+                                    />
+                                    <div
+                                        class="mainContent__desc__articles__projects__unique__desc__buttons"
+                                    >
+                                        <a
+                                            class="projectButton"
+                                            href="https://github.com/Sym3ioZ/ohmyfood"
+                                            target="_blank"
+                                        >
+                                            <span>CODE</span>
+                                        </a>
+                                        <a
+                                            class="projectButton"
+                                            href="https://sym3ioz.github.io/ohmyfood/"
+                                            target="_blank"
+                                        >
+                                            <span>DEMO</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="mainContent__desc__articles__projects__unique"
+                            >
+                                <h4>LA PANTHERE - Agence de WEB design</h4>
+                                <h5>Optimiser un site WEB existant</h5>
+                                <div
+                                    class="mainContent__desc__articles__projects__unique__desc"
+                                >
+                                    <p
+                                        class="mainContent__desc__articles__projects__unique__desc__text"
+                                    >
+                                        Pour ce troisième projet, la tâche était
+                                        d'optimiser le site d'une agence WEB,
+                                        qui était mal référencé au niveau des
+                                        moteurs de recherche, et avait également
+                                        des soucis d'accessibilité. <br />
+                                        J'ai découvert l'approche SEO et les
+                                        critères d'accessibilité du W3C, afin
+                                        d'améliorer le score global du site sur
+                                        ces deux points.
+                                    </p>
+                                    <img
+                                        class="mainContent__desc__articles__projects__unique__desc__image"
+                                        src="./assets/P3_lapanthere.webp"
+                                        alt="snapshot projet 3 lapanthere"
+                                    />
+                                    <img
+                                        class="mainContent__desc__articles__projects__unique__desc__mobileImage"
+                                        src="./assets/P3_lapanthere_mobile.webp"
+                                        alt="snapshot projet 3 lapanthere"
+                                    />
+                                    <div
+                                        class="mainContent__desc__articles__projects__unique__desc__buttons"
+                                    >
+                                        <a
+                                            class="projectButton"
+                                            href="https://github.com/Sym3ioZ/lapanthere"
+                                            target="_blank"
+                                        >
+                                            <span>CODE</span>
+                                        </a>
+                                        <a
+                                            class="projectButton"
+                                            href="https://sym3ioz.github.io/lapanthere/"
+                                            target="_blank"
+                                        >
+                                            <span>DEMO</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="mainContent__desc__articles__projects__unique"
+                            >
+                                <h4>KANAP - Site de vente de canapés</h4>
+                                <h5>
+                                    Construire un site e-commerce en Javascript
+                                </h5>
+                                <div
+                                    class="mainContent__desc__articles__projects__unique__desc"
+                                >
+                                    <p
+                                        class="mainContent__desc__articles__projects__unique__desc__text"
+                                    >
+                                        Ce quatrième projet a été l'occasion de
+                                        découvrir le langage Javascript, via
+                                        l'intégration dynamique des éléments de
+                                        l'API déjà présente dans les différentes
+                                        pages WEB du site. <br />
+                                        Une page d'accueil regroupant l'ensemble
+                                        des produits, une page produit
+                                        spécifique, un panier et une page de
+                                        confirmation: tout ceci a du être géré
+                                        de façon dynamique, grâce à Javascript
+                                        et l'API.
+                                    </p>
+                                    <video
+                                        class="mainContent__desc__articles__projects__unique__desc__video"
+                                        controls
+                                    >
+                                        <source
+                                            src="./assets/Openclassrooms P5-KANAP _ Benoit TORTEVOIS.mp4"
+                                            type="video/mp4"
+                                        />
+                                        DEMO Projet KANAP
+                                    </video>
+                                    <video
+                                        class="mainContent__desc__articles__projects__unique__desc__mobileVideo"
+                                        controls
+                                    >
+                                        <source
+                                            src="./assets/Openclassrooms P5-KANAP _ Benoit TORTEVOIS_mobile.mp4"
+                                            type="video/mp4"
+                                        />
+                                        DEMO Projet KANAP
+                                    </video>
+                                    <div
+                                        class="mainContent__desc__articles__projects__unique__desc__buttons"
+                                    >
+                                        <a
+                                            class="projectButton"
+                                            href="https://github.com/Sym3ioZ/kanap"
+                                            target="_blank"
+                                        >
+                                            <span>CODE</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="mainContent__desc__articles__projects__unique"
+                            >
+                                <h4>
+                                    PIIQUANTE - Application d'évaluations de
+                                    sauces piquantes
+                                </h4>
+                                <h5>
+                                    Construire une API sécurisée pour une
+                                    application d'avis gastronomiques
+                                </h5>
+                                <div
+                                    class="mainContent__desc__articles__projects__unique__desc"
+                                >
+                                    <p
+                                        class="mainContent__desc__articles__projects__unique__desc__text"
+                                    >
+                                        Pour ce cinquième projet, on passe de
+                                        l'autre côté, afin de développer une API
+                                        pour une application qui permet aux
+                                        utilisateurs de proposer des sauces
+                                        piquantes, et de les évaluer. <br />
+                                        Une API basée sur l'utilisation de
+                                        Node.js + Express, ainsi que d'une base
+                                        de données orientée documents (type
+                                        noSQL) via MongoDB.
+                                    </p>
+                                    <video
+                                        class="mainContent__desc__articles__projects__unique__desc__video"
+                                        controls
+                                    >
+                                        <source
+                                            src="./assets/Openclassrooms P6-PIIQUANTE _ Benoit TORTEVOIS.mp4"
+                                            type="video/mp4"
+                                        />
+                                        DEMO Projet PIIQUANTE
+                                    </video>
+                                    <video
+                                        class="mainContent__desc__articles__projects__unique__desc__mobileVideo"
+                                        controls
+                                    >
+                                        <source
+                                            src="./assets/Openclassrooms P6-PIIQUANTE _ Benoit TORTEVOIS.mp4"
+                                            type="video/mp4"
+                                        />
+                                        DEMO Projet PIIQUANTE
+                                    </video>
+                                    <div
+                                        class="mainContent__desc__articles__projects__unique__desc__buttons"
+                                    >
+                                        <a
+                                            class="projectButton"
+                                            href="https://github.com/Sym3ioZ/piiquante"
+                                            target="_blank"
+                                        >
+                                            <span>CODE</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="mainContent__desc__articles__projects__unique"
+                            >
+                                <h4>
+                                    GROUPOMANIA - Réseau social d'entreprise
+                                </h4>
+                                <h5>
+                                    Créer un réseau social interne d'entreprise
+                                </h5>
+                                <div
+                                    class="mainContent__desc__articles__projects__unique__desc"
+                                >
+                                    <p
+                                        class="mainContent__desc__articles__projects__unique__desc__text"
+                                    >
+                                        Ce sixième et dernier projet de la
+                                        formation m'a permis de construire une
+                                        application complète de A à Z. Je me
+                                        suis appuyé sur le framework React.js
+                                        pour la partie frontend, et sur Node.js
+                                        + Express pour développer l'API. Le tout
+                                        épaulé par une base de données SQL, via
+                                        MySQL. <br />
+                                        Un projet long, intense, mais
+                                        enrichissant et m'ayant permis de
+                                        recourir à toutes les compétences que
+                                        j'ai pu acquérir tout au long de ma
+                                        formation.
+                                    </p>
+                                    <video
+                                        class="mainContent__desc__articles__projects__unique__desc__video"
+                                        controls
+                                    >
+                                        <source
+                                            src="./assets/Openclassrooms P7-GROUPOMANIA _ Benoit TORTEVOIS.mp4"
+                                            type="video/mp4"
+                                        />
+                                        DEMO Projet GROUPOMANIA
+                                    </video>
+                                    <video
+                                        class="mainContent__desc__articles__projects__unique__desc__mobileVideo"
+                                        controls
+                                    >
+                                        <source
+                                            src="./assets/Openclassrooms P7-GROUPOMANIA _ Benoit TORTEVOIS_mobile.mp4"
+                                            type="video/mp4"
+                                        />
+                                        DEMO Projet GROUPOMANIA
+                                    </video>
+                                    <div
+                                        class="mainContent__desc__articles__projects__unique__desc__buttons"
+                                    >
+                                        <a
+                                            class="projectButton"
+                                            href="https://github.com/Sym3ioZ/groupomania"
+                                            target="_blank"
+                                        >
+                                            <span>CODE</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article
+                            class="mainContent__desc__articles__resume"
+                            id="resumeBlock"
+                        >
+                            <img
+                                src="./assets/CV_TORTEVOIS_Benoit_développeur-WEB.webp"
+                                alt="CV Benoit TORTEVOIS"
+                                id="resumeImage"
+                                title="Cliquer pour agrandir"
+                            />
+                            <a
+                                href="./assets/CV_TORTEVOIS_Benoit_développeur-WEB.pdf"
+                                target="_blank"
+                                class="DLbutton"
+                                id="DLbutton"
+                            >
+                                Télécharger en .pdf
+                            </a>
+                        </article>
+                        <article
+                            class="mainContent__desc__articles__contact"
+                            id="contactBlock"
+                        >
+                            <a
+                                href="https://github.com/Sym3ioZ"
+                                target="_blank"
+                                class="mainContent__desc__articles__contact__link"
+                                id="github"
+                                title="Github"
+                            >
+                                <i class="fa-brands fa-square-github"></i>
+                                <p>Sym3ioZ</p>
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/benoit-tortevois"
+                                target="_blank"
+                                class="mainContent__desc__articles__contact__link"
+                                id="linkedin"
+                                title="LinkedIn"
+                            >
+                                <i class="fa-brands fa-linkedin"></i>
+                                <p>Benoit TORTEVOIS</p>
+                            </a>
+                            <a
+                                href="https://twitter.com/BTortevois"
+                                target="_blank"
+                                class="mainContent__desc__articles__contact__link"
+                                id="twitter"
+                                title="Twitter"
+                            >
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <p>Benoit TORTEVOIS</p>
+                            </a>
+                            <a
+                                href="mailto:tortevois.benoit@gmail.com"
+                                class="mainContent__desc__articles__contact__link"
+                                id="mail"
+                                title="Envoyer un email"
+                            >
+                                <i class="fa-solid fa-square-envelope"></i>
+                                <p>tortevois.benoit@gmail.com</p>
+                            </a>
+                            <a
+                                href="tel:0749284665"
+                                class="mainContent__desc__articles__contact__link"
+                                id="phone"
+                                title="Appeler"
+                            >
+                                <i class="fa-solid fa-square-phone"></i>
+                                <p>07 49 28 46 65</p>
+                            </a>
+                        </article>
+                    </div>
                 </div>
-                <nav class="navmenu">navmenu</nav>
+
+                <div class="ham" id="burger">
+                    <div class="ham__burger">
+                        <div class="ham__burger__bar" id="burgerBarTop"></div>
+                        <div
+                            class="ham__burger__bar"
+                            id="burgerBarMiddle"
+                        ></div>
+                        <div
+                            class="ham__burger__bar"
+                            id="burgerBarBottom"
+                        ></div>
+                    </div>
+                </div>
+                <nav class="navmenu" id="navmenu">
+                    <div class="navmenu__profilePic">
+                        <img
+                            src="./assets/id_benoit_tortevois.webp"
+                            alt="photo Benoit TORTEVOIS"
+                        />
+                        <div class="navmenu__profilePic__blazeFX1"></div>
+                        <div class="navmenu__profilePic__blazeFX2"></div>
+                        <div class="navmenu__profilePic__blazeFX3"></div>
+                    </div>
+                    <div class="navmenu__name">
+                        <p>Benoit TORTEVOIS</p>
+                        <p>Développeur WEB</p>
+                    </div>
+
+                    <div class="navmenu__tabs">
+                        <div
+                            class="navmenu__tabs__unique selected"
+                            id="prezTab"
+                        >
+                            <i class="fa-solid fa-person-chalkboard"></i>
+                            <span>Présentation</span>
+                        </div>
+                        <div class="navmenu__tabs__unique" id="techsTab">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Technologies</span>
+                        </div>
+                        <div class="navmenu__tabs__unique" id="projectsTab">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <span>Réalisations</span>
+                        </div>
+                        <div class="navmenu__tabs__unique" id="resumeTab">
+                            <i class="fa-solid fa-file"></i>
+                            <span>Mon CV</span>
+                        </div>
+                        <div class="navmenu__tabs__unique" id="contactTab">
+                            <i class="fa-solid fa-address-card"></i>
+                            <span>Contact</span>
+                        </div>
+                    </div>
+
+                    <div class="navmenu__credits">2022 - Benoit TORTEVOIS</div>
+                </nav>
             </div>
         </main>
-        <footer>2022</footer>
         <script src="index.js"></script>
     </body>
 </html>
