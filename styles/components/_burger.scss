@@ -15,12 +15,18 @@
     background-color: rgba(0, 0, 0, 0.3);
     @include mobile {
         display: flex;
-        animation: loadingFade 750ms 2250ms ease-in-out forwards 1;
+        animation: loadingFade 750ms 4250ms ease-in-out forwards 1;
+    }
+    @include xsmobile {
+        transform: scale(0.8);
+        top: 2px;
+        right: 2px;
     }
     &__burger {
         width: 100%;
         height: 100%;
         position: relative;
+        transform: rotate(0deg);
         &__bar {
             width: 80%;
             height: 10%;

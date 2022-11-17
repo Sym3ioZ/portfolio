@@ -1,5 +1,5 @@
 .loader {
-    z-index: 50;
+    z-index: 100;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -7,9 +7,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    background: linear-gradient(
+        43deg,
+        rgb(0, 182, 70) 0%,
+        rgb(9, 121, 74) 30%,
+        rgba(0, 11, 131, 1) 100%
+    );
     opacity: 1;
-    animation: loaderFade 1000ms 2000ms linear forwards;
+    animation: loaderFade 2000ms 2500ms linear forwards;
     & div:first-child {
         width: 10px;
         height: 40px;

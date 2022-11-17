@@ -44,6 +44,10 @@ h1 {
     @include mobile {
         font-size: 32px;
     }
+    @include xsmobile {
+        font-size: 28px;
+        margin: 15px 0 0 0;
+    }
 }
 
 h2 {
@@ -52,6 +56,9 @@ h2 {
     color: $secondaryColor;
     @include mobile {
         font-size: 28px;
+    }
+    @include xsmobile {
+        font-size: 22px;
     }
 }
 
@@ -63,6 +70,9 @@ h3 {
     @include mobile {
         font-size: 28px;
     }
+    @include xsmobile {
+        font-size: 24px;
+    }
 }
 
 h4 {
@@ -73,6 +83,10 @@ h4 {
     @include mobile {
         font-size: 26px;
     }
+    @include xsmobile {
+        font-size: 24px;
+        margin: 3px 0;
+    }
 }
 
 h5 {
@@ -82,6 +96,10 @@ h5 {
     margin: 7px;
     @include mobile {
         font-size: 22px;
+    }
+    @include xsmobile {
+        font-size: 18px;
+        margin: 3px 0;
     }
 }
 

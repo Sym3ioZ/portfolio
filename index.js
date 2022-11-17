@@ -93,7 +93,7 @@ function displayPrez() {
         resumeBlock.classList.add('awaiting')
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
-    }, 100)
+    }, 300)
     burgerToggle()
 }
 
@@ -136,7 +136,7 @@ function displayTechs() {
         resumeBlock.classList.add('awaiting')
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
-    }, 100)
+    }, 300)
     burgerToggle()
 }
 
@@ -179,7 +179,7 @@ function displayProjects() {
         resumeBlock.classList.add('awaiting')
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
-    }, 100)
+    }, 300)
     burgerToggle()
 }
 
@@ -222,7 +222,7 @@ function displayResume() {
         prezBlock.classList.add('awaiting')
         contactBlock.classList.remove('fadeOut')
         contactBlock.classList.add('awaiting')
-    }, 100)
+    }, 300)
     burgerToggle()
 }
 
@@ -265,7 +265,7 @@ function displayContact() {
         resumeBlock.classList.add('awaiting')
         prezBlock.classList.remove('fadeOut')
         prezBlock.classList.add('awaiting')
-    }, 100)
+    }, 300)
     burgerToggle()
 }
 
