@@ -12,7 +12,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    animation: loadingFadeSlide 750ms 4250ms ease forwards 1;
+    animation: loadingFadeSlide 750ms 4000ms ease forwards 1;
     @include mobile {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
