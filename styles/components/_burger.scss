@@ -18,6 +18,8 @@
         animation: loadingFade 750ms 4250ms ease-in-out forwards 1;
     }
     @include xsmobile {
+        display: flex;
+        animation: loadingFade 750ms 4250ms ease-in-out forwards 1;
         transform: scale(0.8);
         top: 2px;
         right: 2px;

@@ -1,9 +1,11 @@
 @keyframes fadeOut {
     0% {
         transform: translateX(0) translateY(0) scale(1);
+        opacity: 1;
     }
     99% {
         transform: translateX(0) translateY(0) scale(0);
+        opacity: 0;
     }
     100% {
         transform: translateX(0) translateY(100vh) scale(0);

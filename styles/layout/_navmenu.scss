@@ -21,15 +21,26 @@
         transition: transform 300ms ease-out;
         transform: translateX(100vh);
     }
+    @include xsmobile {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        animation: none;
+        opacity: 1;
+        transition: transform 300ms ease-out;
+        transform: translateX(100vh);
+    }
     &__profilePic {
         width: 66%;
         border-radius: 50%;
-        margin-top: 20px;
+        margin: 20px 0;
         box-shadow: 0px 0px 25px 2px $primaryColor;
         overflow: hidden;
         position: relative;
         @include mobile {
-            width: 45%;
+            width: 50%;
+        }
+        @include xsmobile {
+            width: 60%;
         }
         & img {
             width: 100%;
@@ -69,33 +80,41 @@
         }
     }
     &__name {
-        display: none;
-        @include mobile {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        p:first-child {
+            font-size: 36px;
+        }
+        p:last-child {
+            font-size: 32px;
+            color: $secondaryColor;
+        }
+        @include smalldesk {
             p:first-child {
-                font-size: 32px;
+                font-size: 28px;
             }
             p:last-child {
-                font-size: 28px;
-                color: $secondaryColor;
+                font-size: 24px;
+            }
+        }
+        @include lores {
+            p:first-child {
+                font-size: 22px;
+            }
+            p:last-child {
+                font-size: 18px;
             }
         }
         @include xsmobile {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             margin-top: 20px;
             p:first-child {
                 font-size: 26px;
             }
             p:last-child {
                 font-size: 20px;
-                color: $secondaryColor;
             }
         }
     }
@@ -116,6 +135,12 @@
             transition: all 250ms ease-in-out;
             position: relative;
             overflow: hidden;
+            @include smalldesk {
+                height: 10%;
+            }
+            @include lores {
+                height: 8%;
+            }
             &::before {
                 content: '';
                 width: 100%;
@@ -133,8 +158,14 @@
                 transform: translateX(20vw) scale(0) rotate(0deg);
                 font-size: 24px;
                 transition: all 250ms ease-in-out;
+                @include smalldesk {
+                    font-size: 22px;
+                }
                 @include xsmobile {
                     font-size: 20px;
+                }
+                @include lores {
+                    font-size: 22px;
                 }
             }
             & span {
@@ -144,8 +175,14 @@
                 position: absolute;
                 right: 3%;
                 transition: all 200ms 50ms ease-in-out;
+                @include smalldesk {
+                    font-size: 24px;
+                }
                 @include xsmobile {
                     font-size: 24px;
+                }
+                @include lores {
+                    font-size: 20px;
                 }
             }
             &:hover {
@@ -154,8 +191,14 @@
                     font-size: 36px;
                     transform: skew(-15deg);
                     margin-right: 3%;
+                    @include smalldesk {
+                        font-size: 28px;
+                    }
                     @include xsmobile {
                         font-size: 30px;
+                    }
+                    @include lores {
+                        font-size: 22px;
                     }
                 }
             }
@@ -170,8 +213,14 @@
             font-size: 36px;
             transform: skew(-15deg);
             margin-right: 3%;
+            @include smalldesk {
+                font-size: 28px;
+            }
             @include xsmobile {
                 font-size: 30px;
+            }
+            @include lores {
+                font-size: 22px;
             }
         }
         & i {
@@ -179,9 +228,8 @@
         }
     }
     &__credits {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         @include xsmobile {
-            margin-bottom: 5px;
             font-size: 14px;
         }
     }

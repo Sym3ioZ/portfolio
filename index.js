@@ -55,6 +55,11 @@ contactTab.addEventListener('click', displayContact)
 resumeImage.addEventListener('click', zoomResume)
 
 function displayPrez() {
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     prezBlock.classList.remove('awaiting')
     prezBlock.classList.add('fadeIn')
     prezTab.classList.add('selected')
@@ -79,11 +84,6 @@ function displayPrez() {
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     contactTab.classList.remove('selected')
-    mainContent.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-    })
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
@@ -98,6 +98,11 @@ function displayPrez() {
 }
 
 function displayTechs() {
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     techsBlock.classList.remove('awaiting')
     techsBlock.classList.add('fadeIn')
     techsTab.classList.add('selected')
@@ -122,11 +127,6 @@ function displayTechs() {
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     contactTab.classList.remove('selected')
-    mainContent.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-    })
     window.setTimeout(() => {
         prezBlock.classList.remove('fadeOut')
         prezBlock.classList.add('awaiting')
@@ -141,6 +141,11 @@ function displayTechs() {
 }
 
 function displayProjects() {
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     projectsBlock.classList.remove('awaiting')
     projectsBlock.classList.add('fadeIn')
     projectsTab.classList.add('selected')
@@ -165,11 +170,6 @@ function displayProjects() {
     prezTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     contactTab.classList.remove('selected')
-    mainContent.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-    })
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
@@ -184,6 +184,11 @@ function displayProjects() {
 }
 
 function displayResume() {
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     resumeBlock.classList.remove('awaiting')
     resumeBlock.classList.add('fadeIn')
     resumeTab.classList.add('selected')
@@ -208,11 +213,7 @@ function displayResume() {
     projectsTab.classList.remove('selected')
     prezTab.classList.remove('selected')
     contactTab.classList.remove('selected')
-    mainContent.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-    })
+
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
@@ -227,6 +228,11 @@ function displayResume() {
 }
 
 function displayContact() {
+    mainContent.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    })
     contactBlock.classList.remove('awaiting')
     contactBlock.classList.add('fadeIn')
     contactTab.classList.add('selected')
@@ -251,11 +257,6 @@ function displayContact() {
     projectsTab.classList.remove('selected')
     resumeTab.classList.remove('selected')
     prezTab.classList.remove('selected')
-    mainContent.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-    })
     window.setTimeout(() => {
         techsBlock.classList.remove('fadeOut')
         techsBlock.classList.add('awaiting')
@@ -271,7 +272,6 @@ function displayContact() {
 
 function zoomResume() {
     if (window.innerWidth > 768) {
-        console.log('in function')
         resumeImage.classList.toggle('zoomResume')
         if (resumeImage.classList[0] == 'zoomResume') {
             resumeImage.setAttribute('title', 'Cliquer pour réduire')
