@@ -1,15 +1,26 @@
 'use strict'
 
+const ios = () => {
+    const useragent = navigator.userAgent
+    if (/iPhone/.test(useragent)) {
+        return 'ios'
+    }
+    return 'other'
+}
+
+const loader = document.getElementById('loader')
+const mainContent = document.getElementById('mainContent')
+const navmenu = document.getElementById('navmenu')
+
+if (ios() == 'ios') {
+    mainContent.style.margin = '300px 0 0 0'
+}
 let burgerCheck
 
 window.onload = (e) => {
     burgerCheck = true
     displayPrez()
 }
-
-const loader = document.getElementById('loader')
-const mainContent = document.getElementById('mainContent')
-const navmenu = document.getElementById('navmenu')
 
 const burger = document.getElementById('burger')
 const burgerBarTop = document.getElementById('burgerBarTop')
